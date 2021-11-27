@@ -5,6 +5,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Footer from "./Footer";
 import SearchPage from "./SearchPage";
+import Login from "./Login";
 function App() {
   return (
     <div className="app">
@@ -12,6 +13,9 @@ function App() {
         <Header />
 
         <Switch>
+          <Route path="/login">
+            <Login />
+            </Route>
           <Route path="/search">
             <SearchPage />
           </Route>

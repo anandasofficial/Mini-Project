@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Banner from "./Banner";
 import Card from "./Card";
+import Login from "./Login";
 
 function Home() {
   return (

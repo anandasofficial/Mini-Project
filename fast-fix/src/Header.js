@@ -19,7 +19,6 @@ function Header() {
                 <h1>Fast Fix</h1>
                
             </div>
-
             <div className='header__right'>
                 <Button>Login</Button>
             </div>
