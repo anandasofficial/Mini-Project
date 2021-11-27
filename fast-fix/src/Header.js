@@ -18,10 +18,7 @@ function Header() {
         <SearchIcon />
       </div>
       <div className="header_right">
-      <Button variant='outlined'>
-                    Login
-                </Button>        <p>Become a host</p>
-        
+        <Button variant="outlined">Login</Button> <p>Become a host</p>
         <LanguageIcon />
         <ExpandMoreIcon />
         <Avatar />

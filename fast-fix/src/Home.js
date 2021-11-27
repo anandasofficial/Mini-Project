@@ -14,8 +14,8 @@ function Home() {
 
             <div className='home__section'>
             <Card
-                src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
-                title="Online Experiences"
+                src="https://st2.depositphotos.com/1010613/6332/i/950/depositphotos_63322175-stock-photo-repairer-repairing-air-conditioner.jpg"
+                title="AC Services"
                 description="Unique activities we can do together, led by a world of hosts."
             />
             <Card
@@ -28,9 +28,15 @@ function Home() {
                 title="Entire homes"
                 description="Comfortable private places, with room for friends or family."
             />
+             <Card
+                src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
+                title="3 Bedroom Flat in Bournemouth"
+                description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
+                price="£130/night"
+            />
             </div>
             <div className='title'>
-              <h1>Maintenance Services</h1>
+              <h1>Salon at Home</h1>
             </div>
 
             <div className='home__section'>
