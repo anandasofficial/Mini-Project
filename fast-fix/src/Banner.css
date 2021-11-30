@@ -1,11 +1,28 @@
 .banner {
-    position: absolute;;
+
+  position: absolute;
   background: url("https://wovenmagazine.com/content/uploads/2019/09/01-CodyCobb_banner.jpg")
     center center;
   width: 100%;
   background-size: cover;
-  height: 50vh;
+  height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__left {
+  color: white;
+}
+.banner__title {
+ border: 2px solid white;
+ max-width: 250px;
+ margin: auto;
+ height: 10vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .banner_info {
   color: white;
@@ -18,29 +35,4 @@
 .banner_search {
   display: flex;
   flex-direction: column;
-}
-
-.banner_info > button {
-    max-width: 700px;
-    width: 100%;
-
-  display: flex;
-  align-items: center;
-
-  justify-content: center;
-  position: absolute;
-  top: 0fr;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: red;
-  color: white;
-  text-transform: inherit;
-  font-weight: 600;
-}
-.banner_info > button:hover {
-  background-color: white;
-
-  color: #ff7779;
 }

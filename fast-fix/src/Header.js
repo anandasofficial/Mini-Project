@@ -1,29 +1,47 @@
-import React from 'react'
-import './Header.css'
-import { Link } from "react-router-dom";
-import { Button } from '@material-ui/core';
+import React from "react";
+import "./Header.css";
+
+
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 function Header() {
-    return (
-        <div className='header'>
-            <Link to='/'>
-                <img
-                    className="header__icon"
-                    src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-                    alt=""
-                />
-            </Link>
-           
-            <div className='header__center'>
-                
-                <h1>Fast Fix</h1>
-               
-            </div>
-            <div className='header__right'>
-                <Button>Login</Button>
-            </div>
+ 
+  return (
+    <div className="header">
+        <div className='header__left'>
+          <p>Left</p>
         </div>
-    )
+      <div className="header__center">
+        <p>Fast Fix</p>
+      </div>
+
+      <div className="header__nav">
+          <div className="header__option">
+            <span className="header__optionLineOne">Hello</span>
+            <span className="header__optionLineTwo"></span>
+          </div>
+
+          <div className="header__option">
+            <span className="header__optionLineOne">Returns</span>
+            <span className="header__optionLineTwo">& Orders</span>
+          </div>
+        
+        
+
+        <div className="header__option">
+          <span className="header__optionLineOne">Your</span>
+          <span className="header__optionLineTwo">Prime</span>
+        </div>
+
+          <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header__optionLineTwo header__basketCount">
+            </span>
+          </div>
+        
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
