@@ -8,7 +8,7 @@ function Banner() {
         <div className='banner__content'>
           <h2>On-Demand </h2>
           <h3>Quality Services</h3>
-          <Button>Explore More</Button>
+          <Button>About Us</Button>
           
         </div>
 
