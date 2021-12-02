@@ -9,7 +9,6 @@ function Header() {
   return (
     <div className="header">
         <div className='header__left'>
-          <p>Left</p>
         </div>
       <div className="header__center">
         <p>Fast Fix</p>

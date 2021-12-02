@@ -5,12 +5,13 @@ import Card from "./Card";
 function Banner() {
   return (
     <div className="banner">
-        <div className='banner__title'>
-          <p>Fast Fix</p>
+        <div className='banner__content'>
+          <h2>On-Demand </h2>
+          <h3>Quality Services</h3>
+          <Button>Explore More</Button>
+          
         </div>
-        <div className="banner_info">
 
-        </div>
         </div>
  
   );
