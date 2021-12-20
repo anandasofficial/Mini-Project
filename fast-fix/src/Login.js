@@ -9,7 +9,7 @@ function Login() {
   return (
     <div className="login">
       
-      <Link to="/">
+      <Link to="/" style={{ textDecoration: 'none' }}>
         <div className="login_headerLeft">
           <h1>FF</h1>
         </div>

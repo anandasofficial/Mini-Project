@@ -134,7 +134,12 @@ function Home() {
           price="£70/night"
         />
        
+       
       </div>
+     
+      
+       
+       
     </div>
     
   );
