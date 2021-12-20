@@ -24,10 +24,11 @@ function App() {
           <Header />
 
           <Home />
+          <Footer />
           </Route>
         </Switch>
-        <Footer />
       </Router>
+
     </div>
   );
 }

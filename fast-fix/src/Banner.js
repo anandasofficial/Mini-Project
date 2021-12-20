@@ -6,9 +6,13 @@ function Banner() {
   return (
     <div className="banner">
         <div className='banner__content'>
-          <h2>On-Demand </h2>
-          <h3>Quality Services</h3>
-          <Button>About Us</Button>
+          <div className='banner_left'>
+         
+            <div className='banner_right'>
+            </div>
+            
+          </div>
+         
           
         </div>
 

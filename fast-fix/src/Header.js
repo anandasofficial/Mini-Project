@@ -10,6 +10,9 @@ function Header() {
   return (
     <div className="header">
         <div className='header__left'>
+        <span className="header_left1">Home</span>
+        <span className="header_left1">About</span>
+
         </div>
       <div className="header__center">
         <p>Fast Fix</p>
@@ -18,20 +21,16 @@ function Header() {
       <div className="header__nav">
         <Link to='/login'>
           <div className="header__option">
+         
             <span className="header__optionLineTwo">Sign In</span>
           </div>
           </Link>
 
           <div className="header__option">
-            <span className="header__optionLineOne">Returns</span>
-            <span className="header__optionLineTwo">& Orders</span>
+            <span className="header__optionLineOne">Services</span>
           </div>
         
 
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
-          <span className="header__optionLineTwo">Prime</span>
-        </div>
 
           <div className="header__optionBasket">
             <ShoppingBasketIcon />

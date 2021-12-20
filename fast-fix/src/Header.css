@@ -1,34 +1,44 @@
 .header {
-  height: 44px;
+    color: #cd9042;
+
+  height: 70px;
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: #f2e9e4;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
 
 }
 
 .header__left {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  text-align: left;
+  padding-left: 1px;
+}
+.header_left1 {
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .header__center {
-  font-family: monospace;
-  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: cursive;
+  font-size: 40px;
   display: flex;
-  color: white;
+  color: black;
   flex: 1;
   justify-content: center;
   align-items: center;
   border-radius: 24px;
+}
+.header__nav {
+  flex: 1;
+  text-align: right;
+  padding-right: 1px;
 }
 
 .header__searchInput {
@@ -46,6 +56,8 @@
 
 .header__optionLineOne {
   font-size: 10px;
+  color: #cd9042;
+  text-decoration: none;
 }
 
 .header__optionLineTwo {
@@ -56,7 +68,7 @@
 .header__optionBasket {
   display: flex;
   align-items: center;
-  color: white;
+  color: black;
 }
 
 .header__basketCount {
@@ -74,5 +86,5 @@
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
-  color: white;
+  color: black;
 }
