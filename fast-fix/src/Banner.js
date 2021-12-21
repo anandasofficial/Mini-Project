@@ -6,7 +6,7 @@ function Banner() {
   return (
     <div className="banner">
       <div className="banner__content">
-        <h1>Banner Content</h1>
+        <Button>Banner Content</Button>
         <div className="banner_left">
           <div className="banner_right"></div>
         </div>
