@@ -10,25 +10,22 @@ import Login from "./Login";
 function App() {
   return (
     <div className="app">
-
       <Router>
-
         <Switch>
           <Route path="/login">
             <Login />
-            </Route>
+          </Route>
           <Route path="/search">
             <SearchPage />
           </Route>
           <Route path="/">
-          <Header />
+            <Header />
 
-          <Home />
-          <Footer />
+            <Home />
+            <Footer />
           </Route>
         </Switch>
       </Router>
-
     </div>
   );
 }

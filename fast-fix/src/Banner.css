@@ -1,5 +1,4 @@
 .banner {
-
   position: absolute;
   background: url("https://images.unsplash.com/photo-1569496736555-47c448d556f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")
     center center;
@@ -11,8 +10,8 @@
   align-items: center;
   justify-content: center;
 }
-.banner__left {
-  color: white;
+.banner__content {
+  color: #d8bfd8;
 }
 
 .banner_info {
@@ -64,5 +63,4 @@
 }
 .banner__content > button:hover {
   transform: scale(1.07);
-
 }
