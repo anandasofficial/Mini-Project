@@ -19,6 +19,7 @@ function Login() {
         <h1>Log into Fast Fix</h1>
       </div>
     </div>
+
   );
 }
 

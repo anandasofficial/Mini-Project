@@ -10,8 +10,8 @@ function Header() {
   return (
     <div className="header">
         <div className='header__left'>
-        <span className="header_left1">Home</span>
-        <span className="header_left1">About</span>
+        <span className="header_left1">Become a Tasker</span>
+        <span className="header_left2">About</span>
 
         </div>
       <div className="header__center">

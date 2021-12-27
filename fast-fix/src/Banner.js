@@ -2,16 +2,18 @@ import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Banner.css";
 import Card from "./Card";
+import { Link } from "react-router-dom";
+
 function Banner() {
   return (
     <div className="banner">
+
       <div className="banner__content">
-        <Button>Banner Content</Button>
-        <div className="banner_left">
-          <div className="banner_right"></div>
+        <Button>Become a Tasker</Button>
         </div>
       </div>
-    </div>
+
+
   );
 }
 

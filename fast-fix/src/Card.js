@@ -10,7 +10,6 @@ function Card({ src, title, description, price }) {
                 <h2>{title}</h2>
                 <h4>{description}</h4>
                 <h3>{price}</h3>
-                <Button>Add to Cart</Button>
             </div>
         </div>
     )

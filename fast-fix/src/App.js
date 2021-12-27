@@ -7,6 +7,7 @@ import Home from "./Home";
 import Footer from "./Footer";
 import SearchPage from "./SearchPage";
 import Login from "./Login";
+import UserAuth from "./UserAuth";
 function App() {
   return (
     <div className="app">
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+            <UserAuth />
           </Route>
           <Route path="/search">
             <SearchPage />

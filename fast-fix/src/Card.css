@@ -7,10 +7,8 @@
     transition: transform 100ms ease-in;
     cursor: pointer;
   }
-  .card_info > button {
-    text-align: center;
-   display: center;
-   background-color: blue;
+  .card__info > button {
+   
   } 
   .card:hover {
     transform: scale(1.07);
