@@ -1,5 +1,6 @@
 .card {
-    background-color: white;
+
+   background-color: white;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -7,8 +8,12 @@
     transition: transform 100ms ease-in;
     cursor: pointer;
   }
-  .card__info > button {
-   
+  .card > button {
+    /*background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;*/
   } 
   .card:hover {
     transform: scale(1.07);

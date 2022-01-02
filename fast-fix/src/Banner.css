@@ -34,6 +34,10 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.banner__content > h1 {
+  color: white;
+  font-family: monospace;
+}
 .banner__content > h2 {
   font-size: 3em;
   font-weight: 800;
@@ -49,8 +53,9 @@
   text-transform: uppercase;
 }
 .banner__content > button {
+  transform: opacity 1s 1.5s ease, background .7s, color .7s;
   border: 2px solid #fff;
-    color: #fff;
+    color: white;
     display: inline-block;
     font-size: 12px;
     line-height: 1;
@@ -75,6 +80,8 @@
 }
 
 .banner__content > button:hover {
+  background: black;
+color: #dcae96;
   transform: scale(1.07);
 }
 .banner__content > p {
