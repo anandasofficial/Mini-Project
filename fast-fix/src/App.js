@@ -19,14 +19,13 @@ function App() {
           </Route>
           <Route path="/Cart">
             <Header />
-           <Cart />
+            <Cart />
           </Route>
           <Route path="/search">
             <SearchPage />
           </Route>
           <Route path="/">
             <Header />
-
             <Home />
             <Footer />
           </Route>

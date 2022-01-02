@@ -3,7 +3,7 @@ import React from 'react';
 import './Card.css'
 import { useStateValue } from './StateProvider';
 
-function Card({ src, title, description, price }) {
+function Card({ id, src, title, description, price }) {
    const [state, dispatch] = useStateValue();
     const addToCart = () => {
         dispatch({

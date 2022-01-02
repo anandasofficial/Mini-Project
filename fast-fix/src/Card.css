@@ -20,9 +20,10 @@
   }
   
   .card > img {
+    width: 200px;
+    height: 180px;
     object-fit: fill;
-    min-width: 200px;
-    min-height: 150px;
+  
     width: 100%;
   }
   
