@@ -9,7 +9,6 @@ import SearchPage from "./SearchPage";
 import Login from "./Login";
 import UserAuth from "./UserAuth";
 function App() {
-  useEffect
   return (
     <div className="app">
       <Router>
