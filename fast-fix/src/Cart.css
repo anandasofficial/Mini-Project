@@ -1,18 +1,19 @@
 .cart {
+  box-shadow: 0px 6px 12px -9px rgba(0, 0, 0, 0.75);
 
-    display: flex;
-    padding: 20px;
-    background-color: white;
-    height: max-content;
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
 }
 
 .cart_ad {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .cart_title {
-    margin-right: 10px;
-    padding: 10px;
-    border-bottom: 1px solid lightgray;
-  }
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}

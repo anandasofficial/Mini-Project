@@ -53,13 +53,13 @@
   text-transform: uppercase;
 }
 .banner__content > button {
-  transform: opacity 1s 1.5s ease, background .7s, color .7s;
+  transform: opacity 1s 1.5s ease, background 0.7s, color 0.7s;
   border: 2px solid #fff;
-    color: white;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 1;
-    padding: 13px 18px 10px 18px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 13px 18px 10px 18px;
   /*display: inline-block;
   font-size: 1em;
   background: whitesmoke;
@@ -70,18 +70,18 @@
   margin-top: 10px;
   color: #111;
   letter-spacing: 2px;*/
-  transition: opacity 1s 1.5s ease, background .7s, color .7s;
-  font-family: "p22-underground",sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 1.3em 3.5em;
-    text-decoration: none;
-    text-transform: uppercase;
+  transition: opacity 1s 1.5s ease, background 0.7s, color 0.7s;
+  font-family: "p22-underground", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 1.3em 3.5em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .banner__content > button:hover {
-  background: black;
-color: #dcae96;
+  background: #f2e9e4;
+  color: #dcae96;
   transform: scale(1.07);
 }
 .banner__content > p {

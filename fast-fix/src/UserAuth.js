@@ -16,6 +16,7 @@ function UserAuth() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
+        console.log(auth);
         history.push("/");
       })
       .catch((error) => alert(error.message));
