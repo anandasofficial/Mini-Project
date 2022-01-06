@@ -10,24 +10,23 @@ import Login from "./Login";
 import UserAuth from "./UserAuth";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import TaskerLogin from "./TaskerLogin";
+import TaskerLoginHeader from "./TaskerLoginHeader";
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
-    auth.onAuthStateChanged(authUser => {
-      console.log('THE USER IS >>>',authUser);
+    auth.onAuthStateChanged((authUser) => {
+      console.log("THE USER IS >>>", authUser);
       if (authUser) {
-
-dispatch({
-  type: 'SET_USER',
-  user: authUser
-})
-      } else {
-
         dispatch({
-          type: 'SET_USER',
-          user: null
-        })
-
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
       }
     });
   }, []);
@@ -35,6 +34,11 @@ dispatch({
     <div className="app">
       <Router>
         <Switch>
+          <Route path="/taskerlogin">
+          <TaskerLoginHeader />
+
+            <TaskerLogin />
+          </Route>
           <Route path="/login">
             <Login />
             <UserAuth />

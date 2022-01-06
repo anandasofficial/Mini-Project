@@ -1,0 +1,7 @@
+.home_card {
+    display: flex;
+    padding: 40px;
+    color: blue;
+    border-bottom: 1px solid lightgray;
+
+}
