@@ -3,11 +3,15 @@ import "./Home.css";
 import Banner from "./Banner";
 import Card from "./Card";
 import HomeCard from "./HomeCard";
+import TaskerHomePage from "./TaskerHomePage";
 
 function Home() {
   return (
     <div className="home">
       <Banner />
+      
+      <TaskerHomePage />
+
       <div className="title">
         <h1>Maintenance Services</h1>
       </div>

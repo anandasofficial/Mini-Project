@@ -17,7 +17,7 @@ function Header() {
     <div className="header">
 
       <div className="header__left">
-        <span className="header_left1">Become a Tasker</span>
+        <span className="header_left1">Services</span>
 
         <span className="header_left2">About</span>
       </div>
@@ -32,10 +32,12 @@ function Header() {
             <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
+        <Link to="/taskerlogin" style={{ textDecoration: "none" }}>
 
         <div className="header__option">
-          <span className="header__optionLineOne">Services</span>
+          <span className="header__optionLineOne">Become a Tasker</span>
         </div>
+        </Link>
 
         <Link to="/cart" style={{ textDecoration: "none" }}>
           <div className="header__optionBasket">

@@ -13,7 +13,7 @@ function TaskerLoginHeader() {
     </Link>
 
     <div className="login_headerRight">
-      <h1>Log into Fast Fix</h1>
+      <h1>Sign up as a partner on Fast Fix</h1>
     </div>
   </div>
 

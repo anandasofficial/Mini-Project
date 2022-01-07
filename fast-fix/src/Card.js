@@ -9,6 +9,7 @@ function Card({ id, src, title, description, price }) {
         dispatch({
             type: 'ADD_TO_CART',
             item: {
+              
                 src: src,
                 title: title,
                 description: description,
