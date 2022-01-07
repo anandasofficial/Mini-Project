@@ -12,6 +12,7 @@ import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import TaskerLogin from "./TaskerLogin";
 import TaskerLoginHeader from "./TaskerLoginHeader";
+import TaskerHomePage from "./TaskerHomePage";
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -34,22 +35,28 @@ function App() {
     <div className="app">
       <Router>
         <Switch>
-          <Route path="/taskerlogin">
-          <TaskerLoginHeader />
+          <Route path="/taskerhomepage">
+            <TaskerHomePage />
+          </Route>
 
+          <Route path="/taskerlogin">
+            <TaskerLoginHeader />
             <TaskerLogin />
           </Route>
           <Route path="/login">
             <Login />
             <UserAuth />
           </Route>
+
           <Route path="/Cart">
             <Header />
             <Cart />
           </Route>
+
           <Route path="/search">
             <SearchPage />
           </Route>
+
           <Route path="/">
             <Header />
             <Home />
