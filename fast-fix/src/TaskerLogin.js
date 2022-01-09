@@ -17,7 +17,7 @@ function TaskerLogin() {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth);
-        history.push("/");
+        history.push("/taskerhomepage");
       })
       .catch((error) => alert(error.message));
   };
@@ -35,7 +35,7 @@ function TaskerLogin() {
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
         if (auth) {
-          history.push("/");
+          history.push("/taskerhomepage");
 
          /* alert("Message has been submitted!");*/
         }

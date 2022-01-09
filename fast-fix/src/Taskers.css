@@ -1,0 +1,33 @@
+.taskers {
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    display: flex;
+    margin-top: 20px;
+margin-left: 20px;
+margin-right: 20px;
+    background-color: white;
+    padding: 80px;
+}
+.container {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: white;
+}
+.left > img {
+    height: 80px;
+    border-radius: 0.25rem;
+}
+.left > h1, p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 0px;
+    overflow-wrap: anywhere;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 1.75rem;
+    line-height: 1.428571429;
+}

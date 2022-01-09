@@ -8,7 +8,7 @@ function CartItem({ id,src, title, description, price }) {
       dispatch({
           type: 'REMOVE_FROM_CART',
           id: id,
-
+          
       })
   };
   

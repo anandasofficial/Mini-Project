@@ -15,11 +15,16 @@ function Subtotal() {
         renderText={(value) => (
           <>
           <h5>Price Details</h5>
+          <h2>              Subtotal ({basket?.length} items): <strong>{value}</strong>
+</h2>
+          <p>              Subtotal ({basket?.length} items): <strong>{value}</strong>
+</p>
             <p>
-              {/* Part of the homework */}
               Subtotal ({basket?.length} items): <strong>{value}</strong>
             </p>
-         
+            <small className="subtotal_gift">
+              <input type="checkbox" /> This order contains a gift
+            </small>
           </>
         )}
         decimalScale={2}
@@ -33,4 +38,4 @@ function Subtotal() {
     )
 }
 
-export default Subtotal
+export default Subtotal;

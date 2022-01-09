@@ -3,7 +3,7 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
-function Cart() {
+function Cart({id, src, title, description, price}) {
   const [{ basket, user }, dispatch] = useStateValue();
 
   return (
@@ -30,6 +30,7 @@ function Cart() {
       </div>
       <div className="cart_right">
         <Subtotal />
+        
       </div>
     </div>
   );
