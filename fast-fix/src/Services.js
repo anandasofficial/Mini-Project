@@ -1,34 +1,45 @@
-import React, { useState, useEffect } from "react";
-import './Services.css';
-import { db } from "./firebase";
-import Card from './Card';
-function Services() {
-    const [services, setServices] = useState([]);
-  useEffect(() => {
-    db.collection("services").onSnapshot((snapshot) =>
-      setServices(snapshot.docs.map((doc) => doc.data()))
-    );
-  }, []);
-    return (
-        <div className='service'>
-               
+import React from 'react';
+import './SearchResult.css';
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import StarIcon from "@material-ui/icons/Star";
 
-            <div className='service_container'>
-                <h1>Services</h1>
-                <div className='service_section'>
-                {services.map(({ src, title, description, price }) => (
-          <Card
-            id="1"
-            src={src}
-            title={title}
-            description={description}
-            price={price}
-          />
-        ))}
+function SearchResult({
+    src,
+    location,
+    title,
+    description,
+    star,
+    price,
+    total,
+}) {
+    return (
+        <div className='searchResult'>
+            <img src={src} alt="" />
+            <FavoriteBorderIcon className="searchResult__heart" />
+
+            <div className='searchResult__info'>
+                <div className="searchResult__infoTop">
+                    <p>{location}</p>
+                    <h3>{title}</h3>
+                    <p>____</p>
+                    <p>{description}</p>
+                </div>
+
+                <div className="searchResult__infoBottom">
+                    <div className="searchResult__stars">
+                        <StarIcon className="searchResult__star" />
+                        <p>
+                            <strong>{star}</strong>
+                        </p>
+                    </div>
+                    <div className='searchResults__price'>
+                        <h2>{price}</h2>
+                        <p>{total}</p>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Services
+export default SearchResult

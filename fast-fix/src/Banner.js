@@ -1,16 +1,21 @@
 import { Button } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useState,  } from 'react'
+import { useHistory } from "react-router-dom";
+
 import "./Banner.css";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 
 function Banner() {
+  const history = useHistory();
+
   return (
     <div className="banner">
       <div className="banner__content">
-        <h1>On-Demand Quality Services</h1>
-        <Button>Become a Tasker</Button>
+        <h1>Fast Fix</h1>
+        <Button onClick={() => history.push('/servicepage')} >Explore Services</Button>
       </div>
+      
     </div>
   );
 }

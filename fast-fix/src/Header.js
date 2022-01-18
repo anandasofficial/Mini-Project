@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import './Header.css';
 import { Link } from "react-router-dom";
 import { auth } from "./firebase";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
@@ -25,7 +25,6 @@ function Header() {
       <div className="header__center">
         <p>Fast Fix</p>
       </div>
-
       <div className="header__nav">
         <Link to={!user && '/login'} style={{ textDecoration: "none" }}>
         <div onClick={handleAuthenticaton} className="header__option">

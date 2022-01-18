@@ -16,3 +16,7 @@
 /*.title:hover {
   transform: scale(1.07);
 }*/
+.name {
+  background-color: white;
+  padding: 270px;
+}

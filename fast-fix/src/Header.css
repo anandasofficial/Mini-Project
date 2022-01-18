@@ -39,6 +39,20 @@
   align-items: center;
   border-radius: 24px;
 }
+.header__center > p {
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: cursive;
+  font-size: 40px;
+  display: flex;
+  color: #dcae96;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  color: #dcae96;
+
+}
 .header__nav {
   cursor: pointer;
   flex: 1;
