@@ -5,7 +5,7 @@ import "./UserAuth.css";
 import { Button } from "@material-ui/core";
 
 
-function UserAuth() {
+function UserAuth() { 
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -28,7 +28,7 @@
 .searchResult__heart {
     position: absolute;
     top: 20px;
-    right: 400px;
+    right: 40px;
 }
 
 .searchResult__infoTop {
@@ -67,9 +67,9 @@
   }
 
 .searchResults__price {
-    position: absolute;
+   position: absolute;
     bottom: 20px;
-    right: 30px;
+    right: 20px;
 }
 
 

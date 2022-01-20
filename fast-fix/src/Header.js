@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import './Header.css';
 import { Link } from "react-router-dom";
 import { auth } from "./firebase";
@@ -6,6 +8,8 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const history = useHistory();
+
   const [{ basket, user }, dispatch] = useStateValue();
 
   const handleAuthenticaton = () => {
@@ -17,13 +21,13 @@ function Header() {
     <div className="header">
 
       <div className="header__left">
-        <span className="header_left1">Services</span>
+        <span className="header_left1" onClick={() => history.push('/servicepage')}>Services</span>
 
         <span className="header_left2">About</span>
       </div>
 
       <div className="header__center">
-        <p>Fast Fix</p>
+        <p onClick={() => history.push('/')}>Fast Fix</p>
       </div>
       <div className="header__nav">
         <Link to={!user && '/login'} style={{ textDecoration: "none" }}>
