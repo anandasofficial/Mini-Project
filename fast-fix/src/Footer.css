@@ -7,3 +7,7 @@ font-family: cursive;
   padding: 60px;
   text-align: center;
 }
+.footer_nav {
+  color: black;
+  font-size: smaller;
+}

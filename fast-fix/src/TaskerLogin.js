@@ -31,7 +31,7 @@ function TaskerLogin() {
     e.preventDefault();
     const isValid = formValidation();
     if (isValid) {
-      db.collection("serviceproviders").add({
+      db.collection("services").add({
         name: name,
         service: service,
         email: email,
@@ -43,7 +43,6 @@ function TaskerLogin() {
           if (auth) {
             history.push("/taskerhomepage");
 
-            /* alert("Message has been submitted!");*/
           }
         })
         .catch((error) => {
@@ -87,7 +86,7 @@ passwordError.passwordLength = "password must be more than 4 characters";
   return (
     <div className="tasker_auth">
       <div className="tasker_container">
-        <h1></h1>
+        <h1>Sign up as a partner on Fast Fix</h1>
         <form>
           <h5>Your Name</h5>
           <input
@@ -106,8 +105,10 @@ passwordError.passwordLength = "password must be more than 4 characters";
             onChange={(e) => setService(e.target.value)}
           />
           {Object.keys(serviceError).map((key) => {
-            return <div style={{ color: "red" }}>{serviceError[key]}</div>;
+            return <div style={{ color: "red", fontFamily: "monospace " }}>{serviceError[key]}</div>;
           })}
+         
+
           <h5>Your Email</h5>
 
           <input
@@ -116,7 +117,7 @@ passwordError.passwordLength = "password must be more than 4 characters";
             onChange={(e) => setEmail(e.target.value)}
           />
           {Object.keys(emailError).map((key) => {
-            return <div style={{ color: "red" }}>{emailError[key]}</div>;
+            return <div style={{ color: "red", fontFamily: "monospace " }}>{emailError[key]}</div>;
           })}
           <h5>Your Password</h5>
 
@@ -126,7 +127,7 @@ passwordError.passwordLength = "password must be more than 4 characters";
             onChange={(e) => setPassword(e.target.value)}
           />
           {Object.keys(passwordError).map((key) => {
-            return <div style={{ color: "red" }}>{passwordError[key]}</div>;
+            return <div style={{ color: "red", fontFamily: "monospace " }}>{passwordError[key]}</div>;
           })}
           <button onClick={signIn} className="tasker_loginButton">
             Sign In
@@ -136,6 +137,7 @@ passwordError.passwordLength = "password must be more than 4 characters";
           Register as a Tasker
         </button>
       </div>
+     
     </div>
   );
 }

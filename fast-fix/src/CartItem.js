@@ -1,7 +1,10 @@
 import React from "react";
+import { Button } from "@material-ui/core";
+
 import "./CartItem.css";
 import { useStateValue } from "./StateProvider";
-
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import StarIcon from "@material-ui/icons/Star";
 function CartItem({ id,src, title, description, price }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromCart = () => {
@@ -13,19 +16,34 @@ function CartItem({ id,src, title, description, price }) {
   };
   
   return (
-    <div className="cart_item">
-      <img className="cartItem_image" src={src} />
-      <div className="cartItem_info">
-        <p className="cartItem_title">{title}</p>
-        <p className="cartItem_price">
-          <small>$</small>
-          <strong>{price}</strong>
-        </p>
+   
 
-        <button onClick={removeFromCart}>Remove from Cart</button>
+<div className='searchResult'>
+<img src={src} alt="" />
+<FavoriteBorderIcon className="searchResult__heart" />
+
+<div className='searchResult__info'>
+    <div className="searchResult__infoTop">
+        <p>{price}</p>
+        <h3>{title}</h3>
+        <p>____</p>
         <p>{description}</p>
-      </div>
     </div>
+
+    <div className="searchResult__infoBottom">
+        <div className="searchResult__stars">
+            <StarIcon className="searchResult__star" />
+            <p>
+                <strong></strong>
+            </p>
+        </div>
+        <div className='cart_button'>
+        <Button onClick={removeFromCart}>Remove from Cart</Button>
+            <p></p>
+        </div>
+    </div>
+</div>
+</div>
   );
 }
 

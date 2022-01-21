@@ -8,12 +8,18 @@ function Cart({id, src, title, description, price}) {
 
   return (
     <div className="cart">
-      <div className="cart_left"></div>
+
+      <div className="cart_left">
+
+      </div>
+
       <div>
         <div>
-          <h3>{user?.email}</h3>
-        </div>
         <h2 className="cart_title">Your shopping Basket</h2>
+
+          <h3>{user?.email}</h3>
+
+        </div>
         {basket.map((item) => (
           <CartItem
             /* src="https://st2.depositphotos.com/1010613/6332/i/950/depositphotos_63322175-stock-photo-repairer-repairing-air-conditioner.jpg"
@@ -28,10 +34,10 @@ function Cart({id, src, title, description, price}) {
           />
         ))}
       </div>
+
       <div className="cart_right">
-        <Subtotal />
-        
       </div>
+
     </div>
   );
 }

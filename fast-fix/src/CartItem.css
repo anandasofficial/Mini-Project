@@ -17,7 +17,7 @@
   font-family: monospace;
   background: black;
   border-radius: 2px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   border: 1px solid;
   margin-top: 10px;
@@ -30,5 +30,11 @@
 }
 .cartItem_title {
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 500;
+}
+.cart_button{
+  padding: 0px;
+
+  background: #dcae96;
+ 
 }

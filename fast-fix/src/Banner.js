@@ -12,7 +12,7 @@ function Banner() {
   return (
     <div className="banner">
       <div className="banner__content">
-        <h1>Fast Fix</h1>
+        <h1>Quality Services, On-Demand</h1>
         <Button onClick={() => history.push('/servicepage')} >Explore Services</Button>
       </div>
       
