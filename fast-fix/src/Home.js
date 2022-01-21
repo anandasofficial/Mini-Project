@@ -20,7 +20,7 @@ function Home() {
       <HomeCard />
 
       <div className="title">
-        <h1>Maintenance Services</h1>
+        <h1>Featured Tasks</h1>
       </div>
 
       <div className="home__section">
@@ -36,27 +36,27 @@ function Home() {
          <Card
           id="2"
           src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="AC Services"
+          title="Furniture Assembly"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="2"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="AC Services"
+          src="https://www.msgfacility.com/wp-content/uploads/2020/08/Gardening-Services.png"
+          title="Yard Work Services"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="3"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          title="General Cleaning"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          src="https://st2.depositphotos.com/1010613/6332/i/950/depositphotos_63322175-stock-photo-repairer-repairing-air-conditioner.jpg"
-          title="AC Services"
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          title="Office Administration"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
