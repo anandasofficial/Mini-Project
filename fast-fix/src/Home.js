@@ -9,10 +9,10 @@ import { db } from "./firebase";
 function Home() {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    db.collection('services').onSnapshot(snapshot => (
-      setServices(snapshot.docs.map(doc => doc.data()))
-    ))
-  }, [])
+    db.collection("services").onSnapshot((snapshot) =>
+      setServices(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, []);
   return (
     <div className="home">
       <Banner />
@@ -24,16 +24,14 @@ function Home() {
       </div>
 
       <div className="home__section">
-        {services.map(({id, src, title, description, price}) => (
-
-       
-      <Card
-          id={id}
-          src={src}
-          title={title}
-          description={description}
-          price={price}
-        />
+        {services.map(({ id, src, title, description, price }) => (
+          <Card
+            id={id}
+            src={src}
+            title={title}
+            description={description}
+            price={price}
+          />
         ))}
         <Card
           id="2"
@@ -117,7 +115,6 @@ function Home() {
           description="Superhost with great amenities and a fabolous shopping complex nearby"
           price="£70/night"
         />
-        
       </div>
       <div className="title">
         <h1>Home Cleaning</h1>
