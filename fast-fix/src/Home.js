@@ -18,7 +18,7 @@ function Home() {
       <Banner />
 
       <HomeCard />
-
+ 
       <div className="title">
         <h1>Featured Tasks</h1>
       </div>
@@ -33,7 +33,7 @@ function Home() {
             price={price}
           />
         ))}
-         <Card
+        <Card
           id="2"
           src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
           title="Furniture Assembly"
@@ -62,36 +62,32 @@ function Home() {
         />
       </div>
       <div className="title">
-        <h1>Salon at Home</h1>
+        <h1>General Cleaning</h1>
       </div>
 
       <div className="home__section">
-      <Card
-          id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+        <Card
+          src="https://2greenchicks.com/wp-content/uploads/2017/11/shutterstock_657213997.jpg"
+          title="House Cleaning Service"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+          src="https://images.unsplash.com/photo-1616804087352-0d82fc0c37bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwd2FzaGluZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+          title="Car Washing"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
 
-<Card
-          id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+        <Card
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          title="Office Administration"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
-         <Card
-          id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+        <Card
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          title="Office Administration"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
@@ -101,25 +97,26 @@ function Home() {
       </div>
 
       <div className="home__section">
-      <Card
+        <Card
           id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="2"
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="AC Services"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
 
         <Card
@@ -134,56 +131,64 @@ function Home() {
       </div>
       <div className="home__section">
         <Card
-          src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-          title="3 Bedroom Flat in Bournemouth"
-          description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
-          price="£130/night"
-        />
-        <Card
-          src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-          title="Penthouse in London"
-          description="Enjoy the amazing sights of London with this stunning penthouse"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          src="https://media.nomadicmatt.com/2018/apartment.jpg"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
+        />
+        <Card
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
 
         <Card
-          src="https://media.nomadicmatt.com/2018/apartment.jpg"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
       </div>
       <div className="home__section">
         <Card
-          src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-          title="3 Bedroom Flat in Bournemouth"
-          description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
-          price="£130/night"
-        />
-        <Card
-          src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-          title="Penthouse in London"
-          description="Enjoy the amazing sights of London with this stunning penthouse"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
-
         <Card
-          src="https://media.nomadicmatt.com/2018/apartment.jpg"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
+        />
+        >
+        <Card
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
       </div>
       <div className="title">
@@ -191,29 +196,33 @@ function Home() {
       </div>
       <div className="home__section">
         <Card
-          src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-          title="Penthouse in London"
-          description="Enjoy the amazing sights of London with this stunning penthouse"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
-          src="https://media.nomadicmatt.com/2018/apartment.jpg"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
 
         <Card
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
         <Card
-          src="https://images.unsplash.com/photo-1493135637657-c2411b3497ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+          id="2"
+          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          title="Furniture Assembly"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
       </div>
     </div>
