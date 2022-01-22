@@ -3,7 +3,7 @@ import './Services.css';
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
 
-function SearchResult({
+function Services({
     src,
     location,
     title,
@@ -42,4 +42,4 @@ function SearchResult({
     )
 }
 
-export default SearchResult
+export default Services

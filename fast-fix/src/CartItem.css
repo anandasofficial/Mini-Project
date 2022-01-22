@@ -34,7 +34,8 @@
 }
 .cart_button{
   padding: 0px;
-
+  font-family: fantasy;
+border-radius: 6px;
   background: #dcae96;
  
 }
