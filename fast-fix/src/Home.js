@@ -93,37 +93,38 @@ function Home() {
         />
       </div>
       <div className="title">
-        <h1>Plumbing</h1>
+        <h1>Shopping + Delivery</h1>
       </div>
 
       <div className="home__section">
         <Card
           id="2"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="Furniture Assembly"
+          src="https://assets.gqindia.com/photos/6070617423780a7fa9a3ec07/master/pass/Online%20grocery%20services.jpeg"
+          title="Grocery Shopping & Delivery"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="2"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="Furniture Assembly"
+          src="https://arriival.com/wp-content/uploads/2019/05/satisfied.jpg"
+          title="Delivery Service"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="2"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="Furniture Assembly"
+          src="https://files.list.co.uk/images/2020/11/27/list-2-LST409858.jpg"
+          title="Pet Food Delivery"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
 
-        <Card
-          src="https://media.nomadicmatt.com/2018/apartment.jpg"
-          title="1 Bedroom apartment"
-          description="Superhost with great amenities and a fabolous shopping complex nearby"
-          price="£70/night"
+<Card
+          id="2"
+          src="https://images.unsplash.com/photo-1597178380795-38c56a1a7053?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80"
+          title="Baby Food Delivery"
+          description="Unique activities we can do together, led by a world of hosts."
+          price="£350/night"
         />
       </div>
       <div className="title">

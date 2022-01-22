@@ -14,6 +14,7 @@ import TaskerLogin from "./TaskerLogin";
 import TaskerLoginHeader from "./TaskerLoginHeader";
 import TaskerHomePage from "./TaskerHomePage";
 import Taskers from "./Taskers";
+import SearchResult from "./SearchResult";
 import Banner from './Banner';
 import ServicePage from './ServicePage';
 function App() {
@@ -41,7 +42,12 @@ function App() {
           <Route path="/taskerhomepage">
             <TaskerHomePage />
           </Route>
-          
+            
+          <Route path="/search">
+            <Header />
+            <SearchResult />
+
+          </Route>
           <Route path="/taskerlogin">
             <Header />
             <TaskerLogin />
