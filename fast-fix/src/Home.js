@@ -183,7 +183,7 @@ function Home() {
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
-        >
+        
         <Card
           id="2"
           src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"

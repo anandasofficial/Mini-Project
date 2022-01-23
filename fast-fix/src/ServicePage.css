@@ -16,4 +16,8 @@
     text-transform: inherit;
     margin: 5px;
   }
+  .search_button {
+    display: grid;
+    justify-content: space-evenly;
+  }
   

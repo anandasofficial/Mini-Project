@@ -6,6 +6,8 @@ import Services from './Services';
 import { db } from "./firebase";
 
 function SearchPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+
     const [services, setServices] = useState([]);
     useEffect(() => {
       db.collection('services').onSnapshot(snapshot => (
@@ -20,8 +22,19 @@ function SearchPage() {
                 <Button variant="outlined">Price</Button>
                 <Button variant="outlined">Rooms and beds</Button>
                 <Button variant="outlined">More filters</Button>
+                <input type="text" className='search_button' onChange={(e) => {setSearchTerm(e.target.value);
+}}></input>
             </div>
-            {services.map(({id, src, title, description, price}) => (
+            {services.filter(({title}) => {
+              if (searchTerm === "") {
+                return title;
+              }
+              else if (title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+              ) {
+                return title;
+              }
+             
+            }).map(({id, src, title, description, price}) => (
 
           <Services
            src={src}
