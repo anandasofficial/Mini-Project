@@ -71,7 +71,10 @@
     bottom: 20px;
     right: 20px;
 }
-
+.buttons {
+    justify-content: space-evenly;
+    border-radius: 40px;
+}
 
 
   

@@ -8,6 +8,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
+
   const history = useHistory();
 
   const [{ basket, user }, dispatch] = useStateValue();
@@ -19,7 +20,7 @@ function Header() {
   }
   return (
     <div className="header">
-
+ 
       <div className="header__left">
         <span className="header_left1" onClick={() => history.push('/servicepage')}>Services</span>
 

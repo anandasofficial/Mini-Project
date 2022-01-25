@@ -17,6 +17,7 @@ import Taskers from "./Taskers";
 import SearchResult from "./SearchResult";
 import Banner from './Banner';
 import ServicePage from './ServicePage';
+import CategoryOption from './CategoryOption';
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -42,7 +43,12 @@ function App() {
           <Route path="/taskerhomepage">
             <TaskerHomePage />
           </Route>
-            
+          <Route path="/categories/:categoryId">
+            <Header />
+            <CategoryOption />
+            <ServicePage />
+
+          </Route>
           <Route path="/search">
             <Header />
             <SearchResult />
