@@ -36,8 +36,8 @@ function Cart() {
       </div>
 
       <div className="cart_right">
-      </div>
 
+      </div>
     </div>
   );
 }

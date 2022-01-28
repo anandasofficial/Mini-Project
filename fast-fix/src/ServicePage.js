@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 import Services from './Services';
 import { db } from "./firebase";
 
-function SearchPage() {
+function ServicePage() {
   const [searchTerm, setSearchTerm] = useState("");
 
     const [services, setServices] = useState([]);
@@ -37,7 +37,7 @@ function SearchPage() {
             }).map(({id, src, title, description, price}) => (
 
           <Services
-           src={src}
+           src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
            location="Private room in center of London"
            title={title}
            description={description}
@@ -55,4 +55,4 @@ function SearchPage() {
     )
 }
 
-export default SearchPage
+export default ServicePage

@@ -1,5 +1,6 @@
 .searchPage__info {
-    padding: 20px;
+  display: flex;
+    padding: 10px;
   }
 
 .searchPage__info > p {
@@ -24,10 +25,10 @@
     justify-content: space-evenly;
     
   }
-  .service__button {
-    padding: 50px;
-    border-radius: 2px;
+  .search_button {
+    border-color: grey;
+    padding: 10px;
+    border-radius: 30px;
     display: flex;
-    background-color: red;
     
   }

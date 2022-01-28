@@ -15,7 +15,6 @@ function Subtotal() {
           <>
             <h5>Price Details</h5>
             <strong>
-              {" "}
               Subtotal ({basket?.length} items): <strong>{value}</strong>
             </strong>
            
@@ -25,7 +24,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={getBasketTotal(basket)} // Part of the homework
+        value={getBasketTotal(basket)} 
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}

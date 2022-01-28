@@ -75,6 +75,7 @@
     justify-content: space-evenly;
     border-radius: 40px;
 }
-
-
+.search_button {
+    display: flex;
+}
   
