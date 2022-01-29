@@ -15,13 +15,13 @@
 .searchPage__info > button {
     border-radius: 30px;
     text-transform: inherit;
-    margin: 5px;
+    margin: -7px;
   }
   .search_button {
     display: flex;
     border-radius: 30px;
     text-transform: inherit;
-    margin: 5px;
+    margin: 3px;
     justify-content: space-evenly;
     
   }

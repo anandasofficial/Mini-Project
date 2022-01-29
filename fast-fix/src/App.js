@@ -18,6 +18,7 @@ import SearchResult from "./SearchResult";
 import Banner from './Banner';
 import ServicePage from './ServicePage';
 import CategoryOption from './CategoryOption';
+import Services from './Services';
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -45,8 +46,8 @@ function App() {
           </Route>
           <Route path="/categories/:categoryId">
             <Header />
-            <CategoryOption />
-            <ServicePage />
+            <Services />
+            
 
           </Route>
           <Route path="/search">

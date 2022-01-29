@@ -24,15 +24,7 @@ function Home() {
       </div>
 
       <div className="home__section">
-        {services.map(({ id, src, title, description, price }) => (
-          <Card
-            id={id}
-            src={src}
-            title={title}
-            description={description}
-            price={price}
-          />
-        ))}
+      
         <Card
           id="12321341"
           src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
@@ -138,21 +130,21 @@ function Home() {
       <div className="home__section">
         <Card
           id="13"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="Furniture Assembly"
+          src="https://alpinemaintenance.com/wp-content/uploads/2019/07/office-cleaning.jpeg"
+          title="Commercial Cleaning"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="14"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-          title="Furniture Assembly"
+          src="https://mattthepainter.com/wp-content/uploads/professional-painters-1024x683.jpg"
+          title="Commercial Painting"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"
         />
         <Card
           id="15"
-          src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCWFAw0xhR8qcc4KYZNeIBQIcQvTA-r3PBrp0Q880iSPwzxP4PEoqAQW-GCJvsRox1MsQ&usqp=CAU"
           title="Furniture Assembly"
           description="Unique activities we can do together, led by a world of hosts."
           price="£350/night"

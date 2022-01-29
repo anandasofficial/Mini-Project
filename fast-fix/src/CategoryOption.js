@@ -3,8 +3,8 @@ import './ServicePage.css';
 import { Button } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 
-function CategoryOption({name,id}) {
-    const history = useHistory();
+function CategoryOption({name, id}) {
+    const history = useHistory(); 
     const selectChannel = () => {
         if (id) {
             history.push(`/categories/${id}`)
