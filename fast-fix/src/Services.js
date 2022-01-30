@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Services.css";
 import { Button } from "@material-ui/core";
 import { useStateValue } from './StateProvider';
-
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
 import { useParams } from "react-router-dom";
 import { db } from "./firebase";
 
-function Services({ src, location, title, description, star, price, total }) {
+function Services({ id, src, location, title, description, star, price, total }) {
   const [state, dispatch] = useStateValue();
 
   const { categoryId } = useParams();
@@ -18,6 +17,7 @@ function Services({ src, location, title, description, star, price, total }) {
     dispatch({
       type: 'ADD_TO_CART',
       item: {
+        id: id,
         src: src,
         price: price,
         location: location,
@@ -35,7 +35,6 @@ function Services({ src, location, title, description, star, price, total }) {
   }, [categoryId]);
   return (
     <div className="searchResult">
-      <h1>{roomDetails?.name}</h1>
       <img src={src} alt="" />
       <FavoriteBorderIcon className="searchResult__heart" />
 
@@ -56,7 +55,7 @@ function Services({ src, location, title, description, star, price, total }) {
           </div>
           <div className="searchResults__price">
             <h2>{location}</h2>
-            <p><Button onClick={addToCart} >Add to Cart</Button></p>
+            <p><Button className='cartbutton' onClick={addToCart} >Add to Cart</Button></p>
 
             <p><Button >Book Now</Button></p>
           </div>
