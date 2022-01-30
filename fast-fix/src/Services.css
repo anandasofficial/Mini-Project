@@ -65,6 +65,10 @@
 .searchResults__price > p {
     text-align: right;
   }
+  .searchResults__price > p > button{
+      margin: 3px;
+    text-align: right;
+  }
 
 .searchResults__price {
     display: flex;
@@ -80,4 +84,3 @@
     display: flex;
    
 }
-  

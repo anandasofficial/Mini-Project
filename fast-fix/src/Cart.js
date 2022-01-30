@@ -1,6 +1,7 @@
 import React from "react";
 import "./Cart.css";
 import CartItem from "./CartItem";
+import Services from "./Services";
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 function Cart() {

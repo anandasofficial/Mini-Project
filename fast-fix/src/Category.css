@@ -1,0 +1,7 @@
+.category_container {
+  
+  padding: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}

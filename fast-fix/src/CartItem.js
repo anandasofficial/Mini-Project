@@ -5,8 +5,9 @@ import "./CartItem.css";
 import { useStateValue } from "./StateProvider";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
-function CartItem({ id, src, title, description, price }) {
-  const [{ basket }, dispatch] = useStateValue();
+function CartItem({  id, src, title, description, price }) {
+
+    const [{ basket }, dispatch] = useStateValue();
   const removeFromCart = () => {
       dispatch({
           type: 'REMOVE_FROM_CART',
@@ -37,7 +38,9 @@ function CartItem({ id, src, title, description, price }) {
                 <strong></strong>
             </p>
         </div>
+
         <div className='cart_button'>
+
         <Button onClick={removeFromCart}>Remove from Cart</Button>
             <p></p>
         </div>

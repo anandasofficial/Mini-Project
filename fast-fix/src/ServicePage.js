@@ -54,6 +54,7 @@ function ServicePage() {
         .map(({ id, src, location, title, description, price }) => (
           <Services
             src={src}
+            id={id}
             location={location}
             title={title}
             description={description}
