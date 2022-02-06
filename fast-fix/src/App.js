@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import { StateProvider } from "./StateProvider";
 import Cart from "./Cart";
 import Header from "./Header";
 import Home from "./Home";
@@ -21,6 +22,7 @@ import CategoryOption from './CategoryOption';
 import Services from './Services';
 import Category from "./Category";
 function App() {
+
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -39,11 +41,14 @@ function App() {
     });
   }, []);
   return (
+    <>
     <div className="app">
       <Router>
         <Switch>
           <Route path="/taskerhomepage">
+            <Header />
             <TaskerHomePage />
+            <Footer />
           </Route>
           <Route path="/categories/:categoryId">
             <Header />
@@ -93,6 +98,7 @@ function App() {
         </Switch>
       </Router>
     </div>
+    </>
   );
 }
 

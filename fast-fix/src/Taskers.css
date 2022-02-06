@@ -24,7 +24,7 @@ margin-right: 20px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    margin: 0px;
+    margin: -7px;
     overflow-wrap: anywhere;
     color: rgb(0, 0, 0);
     text-align: left;

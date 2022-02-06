@@ -5,6 +5,7 @@
     padding: 20px;
     border-bottom: 1px solid lightgray;
     cursor: pointer;
+
   }
 
 .searchResult:hover {
@@ -83,4 +84,16 @@
 .search_button {
     display: flex;
    
+}
+.service__price {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 40vw;
+
+}
+.service__price > p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: gray;
 }

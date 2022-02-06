@@ -32,3 +32,6 @@
     display: flex;
     
   }
+  .search_button::placeholder {
+    color: grey;
+  }

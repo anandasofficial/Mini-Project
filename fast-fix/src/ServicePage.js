@@ -1,17 +1,17 @@
 import "./SearchPage.css";
 import React, { useState, useEffect } from "react";
-
 import { Button } from "@material-ui/core";
 import Services from "./Services";
 import { db } from "./firebase";
 import CategoryOption from './CategoryOption';
+import LanguageIcon from "@material-ui/icons/Language";
 
 function ServicePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [services, setServices] = useState([]);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    db.collection('categories').onSnapshot(snapshot => (
+    db.collection('categories').orderBy("name", "asc").onSnapshot(snapshot => (
       setCategories (
         snapshot.docs.map(doc => ({
           id: doc.id,
@@ -33,8 +33,10 @@ function ServicePage() {
        />
 
         ))}
+
         <input
           type="text"
+          placeholder="Search by city!"
           className="search_button"
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -63,6 +65,7 @@ function ServicePage() {
             total="£117 total"
           />
         ))}
+        
     </div>
   );
 }

@@ -6,6 +6,7 @@ overflow: hidden;
   background: url("https://images.unsplash.com/photo-1569496736555-47c448d556f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")
     center center;
   
+  
   width: 100%;
   background-size: cover;
   height: 100vh;
@@ -16,9 +17,7 @@ overflow: hidden;
   animation: slider 9s infinite linear;
 }
 
-.banner__content {
- 
-  
+.banner__content{
   
   color: #d8bfd8;
 }
@@ -46,7 +45,7 @@ overflow: hidden;
 }
 .banner__content > h1 {
   color: white;
-  font-family: monospace;
+  font-family: cursive;
 }
 .banner__content > h2 {
   font-size: 3em;

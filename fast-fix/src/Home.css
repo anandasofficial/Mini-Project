@@ -20,3 +20,32 @@
   background-color: white;
   padding: 270px;
 }
+.home__bottom {
+  padding: 280px;
+  padding-top: 0px;
+
+  background-color: whitesmoke;
+}
+.bottom__container {
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bottom__container > p{
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: lightgray;
+
+}
+.bottom__container > h1 {
+  font-family: cursive;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.bottom__card {
+  display: flex;
+}

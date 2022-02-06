@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Cart.css";
 import CartItem from "./CartItem";
 import Services from "./Services";
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
-function Cart() {
-  const [{ basket, user }, dispatch] = useStateValue();
 
+const anand = JSON.parse(localStorage.getItem('basket')) || [];
+function Cart() {
+
+  const [{ basket, user }, dispatch] = useStateValue(anand);
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+
+  }, [basket]);
   return (
     <div className="cart">
 
@@ -34,10 +40,11 @@ function Cart() {
             price={item.price}
           />
         ))}
+       
       </div>
 
       <div className="cart_right">
-
+<Subtotal />
       </div>
     </div>
   );

@@ -8,6 +8,16 @@ font-family: cursive;
   text-align: center;
 }
 .footer_nav {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   color: black;
   font-size: smaller;
+}
+.footer_nav > p {
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
