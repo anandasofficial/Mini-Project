@@ -58,9 +58,9 @@ function UserAuth() {
             Sign In
           </button>
         </form>
-        <button onClick={register} className="user_registerButton">
+        <Button onClick={register} className="user_registerButton">
           Create your Fast Fix Account
-        </button>
+        </Button>
       </div>
     </div>
   );

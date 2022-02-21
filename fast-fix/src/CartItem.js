@@ -1,12 +1,16 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 import "./CartItem.css";
 import { useStateValue } from "./StateProvider";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
 function CartItem({ id, src, title, description, price }) {
+  const history = useHistory();
+
   const [{ basket }, dispatch] = useStateValue();
+ 
   const removeFromCart = () => {
     dispatch({
       type: "REMOVE_FROM_CART",
@@ -14,6 +18,9 @@ function CartItem({ id, src, title, description, price }) {
     });
   };
 
+  const print = () => {
+console.log("Heeeeeeey");
+  };
   return (
     <div className="searchResult">
       <img src={src} alt="" />
@@ -40,7 +47,7 @@ function CartItem({ id, src, title, description, price }) {
           </div>
 
           <div className="cart_button">
-            <Button onClick={removeFromCart}>Remove from Cart</Button>
+            <Button onClick={(e)=> {removeFromCart(); history.push('servicepage')}}>Remove from Cart</Button>
             <p></p>
           </div>
         </div>

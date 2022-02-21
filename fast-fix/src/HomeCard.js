@@ -5,11 +5,11 @@ function HomeCard() {
     return (
         <div className="home_card">
       <div className="homecard_container">
-<div className='lefts'>
+<div className='leftt'>
 <h1>Fast Fix</h1>
 
   </div>  
-  <div className='rights'>
+  <div className='rightt'>
     <h2>About Us </h2>
   <p>When life gets busy, you don’t have to tackle it alone. Get time back for what you love without breaking the bank.</p>
 

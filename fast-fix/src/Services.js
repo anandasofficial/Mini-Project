@@ -6,8 +6,10 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import StarIcon from "@material-ui/icons/Star";
 import { useParams } from "react-router-dom";
 import { db } from "./firebase";
+import { useHistory } from "react-router-dom";
 
 function Services({
+  name,
   id,
   src,
   location,
@@ -17,6 +19,14 @@ function Services({
   price,
   total,
 }) {
+  const history = useHistory();
+  const selectCategory = () => {
+    if (id) {
+        history.push(`/categories/${id}`)
+    } else {
+        history.push('/');
+    }
+  }
   const [state, dispatch] = useStateValue();
 
   const { categoryId } = useParams();
@@ -75,7 +85,7 @@ function Services({
             </p>
 
             <p>
-              <Button>Book Now</Button>
+              <Button onClick={selectCategory} >View</Button>
             </p>
           </div>
         </div>

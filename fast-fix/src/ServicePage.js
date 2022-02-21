@@ -36,7 +36,7 @@ function ServicePage() {
 
         <input
           type="text"
-          placeholder="Search by city!"
+          placeholder="Search by service!"
           className="search_button"
           onChange={(e) => {
             setSearchTerm(e.target.value);

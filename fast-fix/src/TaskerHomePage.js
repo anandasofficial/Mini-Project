@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
+import "./Sample.css";
 import { db } from "./firebase";
-import "./TaskerHomePage.css";
-import { Button } from "@material-ui/core";
+import { useStateValue } from "./StateProvider";
 
-function TaskerHomePage() {
+function Sample({ categoryId }) {
+
   const initialValues = { name: "", phone: "", service: "", city: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -17,31 +17,38 @@ function TaskerHomePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(typeof categoryId);
+
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    
   };
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
-      db.collection("service_providers")
-      .add({
-        name: formValues.name,
-        phone: formValues.phone,
-        service: formValues.service,
-        city: formValues.city,
-      })
+     
+     
+        db.collection("ServiceProviders")
+         
+
+          .add({
+            name: formValues.name,
+            phone: formValues.phone,
+            service: formValues.service,
+            city: formValues.city,
+          });
+      
     }
   }, [formErrors]);
+
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.name) {
-      errors.name = "name required!";
+      errors.name = "Name is required!";
     }
     if (!values.phone) {
-      errors.phone = "Phone is required!";
+      errors.phone = "Phone Number is required!";
     } else if (values.phone.length > 10) {
       errors.phone = "This is not a valid email format!";
     }
@@ -54,67 +61,70 @@ function TaskerHomePage() {
     return errors;
   };
   return (
-    <div className="user__auth">
-      <div className="user__container">
-        <div className="left__image">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"></img>
-        </div>
-        <div className="right">
-          <div className="right__content">
-            <h1>Job Details</h1>
+    <div className="sample">
+      <h1>Share Your Skills</h1>
+
+      <div className="sample__container">
+        <div className="sample__heading"></div>
+        <div className="sample__center">
+          <div className="sample__centerLeft">
+            <h1>Be your own boss</h1>
+            <p>
+            Find local jobs that fit your skills and schedule. With FastFix, you have the freedom and support to be your own boss.
+            </p>
+            <p>_________________________________________</p>
+            <div className="sample__image"></div>
+         
+          </div>
+          <div className="sample__centerRight">
+            <h1>Tell us a little about yourself:</h1>
             <form>
+              <h5>Enter your name</h5>
               <input
-                name="name"
                 type="text"
-                autoComplete="nope"
-                placeholder="Your name"
+                name="name"
                 value={formValues.name}
                 onChange={handleChange}
               />
-              <p>{formErrors.city}</p>
+              <p>{formErrors.name}</p>
 
+              <h5>Enter your phone</h5>
               <input
                 type="text"
                 name="phone"
-                placeholder="Your phone"
                 value={formValues.phone}
                 onChange={handleChange}
               />
               <p>{formErrors.phone}</p>
 
+              <h5>Services you offer</h5>
               <input
                 type="text"
                 name="service"
-                placeholder="Services you offer"
                 value={formValues.service}
                 onChange={handleChange}
               />
               <p>{formErrors.service}</p>
 
+              <h5>Your City</h5>
               <input
                 type="text"
                 name="city"
-                placeholder="Your City"
                 value={formValues.city}
                 onChange={handleChange}
               />
               <p>{formErrors.city}</p>
             </form>
-            <div className="submitbutton">
-              <Button type="submit" onClick={handleSubmit}>
-                Submit
-              </Button>
+            <div className="sample__button">
+              <button type="submit" onClick={handleSubmit}>
+                Get Started
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="bottom">
-        <div className="heading">
-          <h1>Getting Started</h1>
         </div>
       </div>
     </div>
   );
 }
 
-export default TaskerHomePage;
+export default Sample;

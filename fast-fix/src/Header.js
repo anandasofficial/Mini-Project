@@ -24,7 +24,7 @@ function Header() {
       <div className="header__left">
         <span className="header_left1" onClick={() => history.push('/servicepage')}>Services</span>
 
-        <span className="header_left2">About</span>
+        <span className="header_left2" onClick={() => history.push('./taskers')}>Taskers</span>
       </div>
 
       <div className="header__center">

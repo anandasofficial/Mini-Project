@@ -19,18 +19,18 @@
       font-style: inherit;
       font-size: 100%;
   }
-  .lefts {
+  .leftt {
     float: left;
   }
-  .lefts > h1 {
+  .leftt > h1 {
     font-size: 36px;
     font-weight: 800;
   }
-  .rights {
+  .rightt {
     float: right;
     width: 48%;
   }
-  .rights > p {
+  .rightt > p {
     font-size: 18px;
     line-height: 1.4;
   }

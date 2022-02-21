@@ -97,3 +97,7 @@
     font-size: 13px;
     color: gray;
 }
+.searchResult__star > p > strong{
+    color: aqua;
+    font-size: smaller;
+}

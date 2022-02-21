@@ -63,13 +63,13 @@ function TaskerLogin() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={signIn} className="tasker_loginButton">
-            Sign In
+          <button onClick={register} className="tasker_loginButton">
+          Register as a Tasker
           </button>
         </form>
-        <button onClick={register} className="tasker_registerButton">
-          Register as a Tasker
-        </button>
+        <p>Already have an account? Sign In</p>
+        <button onClick={signIn} className="tasker_registerButton">
+Sign In        </button>
       </div>
      
     </div>

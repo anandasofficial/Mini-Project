@@ -91,3 +91,9 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
 }
+.user_container > p {
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  font-size: smaller;
+}

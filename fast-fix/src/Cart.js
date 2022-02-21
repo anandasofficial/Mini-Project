@@ -5,27 +5,21 @@ import Services from "./Services";
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 
-const anand = JSON.parse(localStorage.getItem('basket')) || [];
+const anand = JSON.parse(localStorage.getItem("basket")) || [];
 function Cart() {
-
   const [{ basket, user }, dispatch] = useStateValue(anand);
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
-
   }, [basket]);
   return (
     <div className="cart">
-
-      <div className="cart_left">
-
-      </div>
+      <div className="cart_left"></div>
 
       <div>
-        <div>
-        <h2 className="cart_title">Your shopping Basket</h2>
+        <div className="shopping">
+          <h2 className="cart_title">Your Service Cart</h2>
 
           <h3>{user?.email}</h3>
-
         </div>
         {basket.map((item) => (
           <CartItem
@@ -40,11 +34,10 @@ function Cart() {
             price={item.price}
           />
         ))}
-       
       </div>
 
       <div className="cart_right">
-<Subtotal />
+        <Subtotal />
       </div>
     </div>
   );

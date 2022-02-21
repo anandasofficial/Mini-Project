@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 function CategoryOption({name, id}) {
     const history = useHistory(); 
-    const selectChannel = () => {
+    const selectCategory = () => {
         if (id) {
             history.push(`/categories/${id}`)
         } else {
@@ -14,7 +14,7 @@ function CategoryOption({name, id}) {
     };
   return (
   <div className="searchPage">
-    <div className="searchPage__info" onClick={selectChannel} >
+    <div className="searchPage__info" onClick={selectCategory} >
       <Button variant="outlined">{name}</Button>
 
      

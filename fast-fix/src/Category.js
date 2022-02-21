@@ -4,6 +4,7 @@ import { db } from "./firebase";
 import Services from "./Services";
 import CategoryOption from "./CategoryOption";
 import "./Category.css";
+import TaskerHomePage from './TaskerHomePage';
 
 function Category() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,6 +46,7 @@ function Category() {
         ))}
          <input
           type="text"
+          placeholder="Search by service!"
           className="search_button"
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -78,6 +80,7 @@ function Category() {
 
         />
       ))}
+     
     </div>
   );
 }
