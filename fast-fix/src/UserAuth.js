@@ -54,13 +54,15 @@ function UserAuth() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" onClick={signIn} className="user_loginButton">
-            Sign In
+          <button type="submit" onClick={register} className="user_loginButton">
+            Register
           </button>
         </form>
-        <Button onClick={register} className="user_registerButton">
-          Create your Fast Fix Account
-        </Button>
+        <p>
+        Already have an account? <strong onClick={signIn}>Sign In</strong>
+
+        </p>
+        
       </div>
     </div>
   );

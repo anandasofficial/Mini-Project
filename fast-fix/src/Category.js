@@ -26,7 +26,8 @@ function Category() {
         snapshot.docs.map((doc) => ({
           id: doc.id,
           name: doc.data().name,
-        }))
+        }
+        ))
       )
     );
 

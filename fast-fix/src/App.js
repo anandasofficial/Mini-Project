@@ -21,7 +21,9 @@ import CategoryOption from "./CategoryOption";
 import Category from "./Category";
 import ServiceDetails from "./ServiceDetails";
 import Sample from "./Sample";
-import TaskerDetails from './TaskerDetails';
+import TaskerDetails from "./TaskerDetails";
+import TaskDescription from "./TaskDescription";
+import Services from "./Services";
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -54,16 +56,21 @@ function App() {
               <Header />
               <Category />
             </Route>
+
+            <Route path="/tasker/:taskerId">
+            </Route>
             <Route path="/servicedetails">
               <Header />
               <ServiceDetails />
             </Route>
             <Route path="/sample">
               <Header />
-<Sample />          
-<Footer />   
+              <Sample />
+              <Footer />
             </Route>
-            
+            <Route path="/description">
+              <TaskDescription />
+            </Route>
             <Route path="/search">
               <Header />
               <SearchResult />

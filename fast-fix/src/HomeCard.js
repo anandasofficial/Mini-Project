@@ -11,7 +11,7 @@ function HomeCard() {
   </div>  
   <div className='rightt'>
     <h2>About Us </h2>
-  <p>When life gets busy, you don’t have to tackle it alone. Get time back for what you love without breaking the bank.</p>
+  <p>Fast Fix is an online platform that connects offline workers with local demand, allowing consumers to find immediate help with everyday tasks, including cleaning, moving, delivery and handyman work.</p>
 
     </div>    
       </div>

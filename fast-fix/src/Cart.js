@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Cart.css";
+import { useParams } from "react-router-dom";
+
 import CartItem from "./CartItem";
 import Services from "./Services";
 import { useStateValue } from "./StateProvider";
@@ -7,6 +9,7 @@ import Subtotal from "./Subtotal";
 
 const anand = JSON.parse(localStorage.getItem("basket")) || [];
 function Cart() {
+
   const [{ basket, user }, dispatch] = useStateValue(anand);
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));

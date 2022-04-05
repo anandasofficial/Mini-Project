@@ -44,6 +44,8 @@
     transform: translateY(-50%);
   }
   .banner__content > h1 {
+    font-size: 50px;
+       text-shadow: 2px 2px #dcae96;
     color: white;
     font-family: 'Dangrek', cursive;
   }

@@ -20,9 +20,14 @@ function Services({
   total,
 }) {
   const history = useHistory();
+  const [services, setServices] = useState([]);
+
   const selectCategory = () => {
     if (id) {
         history.push(`/categories/${id}`)
+        db.collection("services")
+        .onSnapshot((snapshot) => 
+        setServices(snapshot.docs.map((doc) => doc.data())))
     } else {
         history.push('/');
     }

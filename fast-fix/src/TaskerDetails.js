@@ -7,6 +7,7 @@ function TaskerDetails() {
 
     useEffect(() => {
         db.collection('ServiceProviders')
+        
         .onSnapshot(snapshot => (
             setTaskers(snapshot.docs.map(doc => doc.data()))
 
@@ -15,13 +16,15 @@ function TaskerDetails() {
        
   return (
     <div>
-       {taskers.map(({name, src, phone, service, city}) => (
+       {taskers.map(({name, taskerId, price, src, phone, service, city}) => (
            <Taskers 
+           taskerId={taskerId}
            name={name}
            src={src}
            phone={phone}
            service={service}
            city={city}
+           price={price}
            />
        ))}
     </div>

@@ -23,3 +23,6 @@
 .shopping > h2 {
   font-family: cursive;
 }
+.shopping > h3 {
+  color: grey;
+}

@@ -46,8 +46,8 @@ console.log("Heeeeeeey");
             </p>
           </div>
 
-          <div className="cart_button">
-            <Button onClick={(e)=> {removeFromCart(); history.push('servicepage')}}>Remove from Cart</Button>
+          <div className="cart__Button">
+            <Button onClick={removeFromCart}>Remove from Cart</Button>
             <p></p>
           </div>
         </div>

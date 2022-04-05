@@ -5,7 +5,7 @@ function Footer() {
     <div className="footer">
       <h1>Fast Fix</h1>
       <div className="footer_nav">
-            <p>© 2020 Airbnb clone! No rights reserved - this is a demo!</p>
+            <p>© 2022 Fast Fix! Online Platform - Development in progress!</p>
             <p>Privacy · Terms · Sitemap · Company Details</p>
            
       </div>
