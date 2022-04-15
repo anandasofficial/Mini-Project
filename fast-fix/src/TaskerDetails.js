@@ -16,6 +16,13 @@ function TaskerDetails() {
        
   return (
     <div>
+      <div className="SearchButton__tas">
+        <form>
+        <input type="text">
+
+        </input>
+        </form>
+      </div>
        {taskers.map(({name, taskerId, price, src, phone, service, city}) => (
            <Taskers 
            taskerId={taskerId}

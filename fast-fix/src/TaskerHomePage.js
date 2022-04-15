@@ -3,7 +3,9 @@ import "./TaskerHomePage.css";
 import { auth, db, storage } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import TaskerLogin from "./TaskerLogin";
+import { useParams } from 'react-router-dom';
 function Sample({ categoryId }) {
+  const { roomId } = useParams();
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -52,6 +54,7 @@ function Sample({ categoryId }) {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
 
+
       db.collection("ServiceProviders").add({
         src: formValues.src,
         name: formValues.name,
@@ -61,6 +64,7 @@ function Sample({ categoryId }) {
         price: formValues.price,
       });
     }
+    
   }, [formErrors]);
 
   const validate = (values) => {
@@ -154,7 +158,7 @@ function Sample({ categoryId }) {
                 <h5>Enter your image url</h5>
 
                 <input
-                  type="text"
+                  type="file"
                   name="src"
                   value={formValues.src}
                   onChange={handleChange}

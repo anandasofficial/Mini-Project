@@ -1,0 +1,15 @@
+.SearchButton__tas > form > input {
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    height: 16px;
+    margin-bottom: 10px;
+    width: 98%;
+    border-bottom: 1px solid black;
+}
+.SearchButton__tas {
+    padding-bottom: 10px;
+
+    padding-left: 1182px;
+    }

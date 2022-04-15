@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import { StateProvider } from "./StateProvider";
 import Cart from "./Cart";
+import Admin from "./Admin";
 import Header from "./Header";
 import Home from "./Home";
 import Footer from "./Footer";
@@ -62,6 +63,10 @@ function App() {
             <Route path="/servicedetails">
               <Header />
               <ServiceDetails />
+            </Route>
+            <Route path="/admin">
+              
+              <Admin />
             </Route>
             <Route path="/sample">
               <Header />
