@@ -4,7 +4,11 @@ import { auth, db, storage } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import TaskerLogin from "./TaskerLogin";
 import { useParams } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
 function Sample({ categoryId }) {
+  const history = useHistory();
+
   const { roomId } = useParams();
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -54,7 +58,7 @@ function Sample({ categoryId }) {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
 
-
+      history.push('/');
       db.collection("ServiceProviders").add({
         src: formValues.src,
         name: formValues.name,
@@ -103,8 +107,7 @@ function Sample({ categoryId }) {
           <div className="sample__centerLeft">
             <h1>Be your own boss</h1>
             <p>
-              Find local jobs that fit your skills and schedule. With FastFix,
-              you have the freedom and support to be your own boss.
+            Find jobs in your area that match your skills and schedule. You have the freedom and support to be your own boss with Fast Fix.
             </p>
             <p>_________________________________________</p>
             <div className="sample__image"></div>
@@ -158,7 +161,7 @@ function Sample({ categoryId }) {
                 <h5>Enter your image url</h5>
 
                 <input
-                  type="file"
+                  type="text"
                   name="src"
                   value={formValues.src}
                   onChange={handleChange}

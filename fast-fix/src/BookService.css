@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Oswald:wght@500&family=Shadows+Into+Light&family=Source+Code+Pro:wght@200;700&display=swap');
+
+.BookService {
+    margin-top: -25px;
+    text-align: center;
+    padding: 0px;
+
+}
+.BookService > h1 {
+    font-family: 'Shadows Into Light', cursive;
+
+}
+.BookService__container {
+    text-align: center;
+    align-items: center;
+}
+.BookService__heading > h1 {
+    cursor: pointer;
+
+    font-family: 'Shadows Into Light', cursive;
+color: grey;
+}
+.BookService__heading {
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    background-color: white;
+}
+.BookService__container {
+    margin-top: -21px;
+    padding: 550px;
+    background-color: white;
+}
+.BookService__containerMiddle {
+    margin-top: -511px;
+    margin-left: -528px;
+    width: 1303px;
+    height: 500px;
+    /*background-color: #f4f0ea;*/
+    background-color: #f7f7f7;
+}
+.BookService__containerMiddle > h1 {
+    font-size: 48px;
+    height: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    padding: 100px;
+}
+.containerMiddle__p {
+    margin-top: -89px;
+}
+.containerMiddle__p > p {
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: -10px;
+
+    color: grey;
+}
+.containerMiddle__p > h2 {
+    padding: 30px;
+    color: #3b9e5e;
+
+}
+.socialMedia__icons {
+    position: fixed;
+    margin-top: -120px;
+}
+.socialMedia__icons > p {
+    cursor: pointer;
+    width: 100px;
+    padding-left: -400px;
+}
+.BookService__bottom {
+    display: flex;
+}
+.BookService__bottomLeft > img {
+    border-radius: 15px;
+    border-color: #3b9e5e;
+    box-sizing: border-box;
+    object-fit: contain;
+    margin-top: 94px;
+    margin-left: -430px;
+    background-color: red;
+}
+
+.BookService__bottomRight {
+    margin-left: 30px;
+    padding-left: -40px;
+    width: 200px;
+}
+.BookService__bottomRight > h1{
+    border-left: 1px solid lightgray;
+
+    width: 700px;
+    height: 700px;
+    margin-top: 94px;
+    margin-left: 20px;
+}
+.bottomRight__details {
+
+margin: 20px;  
+  color: gray;
+    width: 360px;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: -720px;
+    margin-left: 100px;
+}
+.bottomRight__details > h2 {
+    color: #3b9e5e;
+}
+.bottomRight__inputs > form > input {
+    border: 1px solid lightgray;
+    background-color: #f7f7f7;
+    width: 166px;
+    height: 30px;
+    margin-left: 10px;
+    padding: 0px;
+    margin-top: 20px;
+}
+.bottomRight__inputs > h3 {
+    text-decoration: none;
+}
+.bottomRight__inputsTwo > form > input {
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin-top: 20px;
+    border: 2px solid lightgray;
+    width: 342px;
+    height: 60px;
+    margin-left: 10px;
+}
+.bottomRight__inputsTwo > form > input::placeholder {
+    color: grey;
+}
+.bottomRight__inputs > form > input::placeholder {
+    margin-left: 20px;
+    color: grey;
+}
+.bottomRight__inputs > form > input::-webkit-input-placeholder {
+    text-align: center;
+  }

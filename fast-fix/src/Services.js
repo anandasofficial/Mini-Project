@@ -21,7 +21,15 @@ function Services({
 }) {
   const history = useHistory();
   const [services, setServices] = useState([]);
+const selectService = () => {
+  if (id) {
+    history.push(`/services/${id}`)
+ 
+  } else {
+    history.push('/');
 
+  }
+}
   const selectCategory = () => {
     if (id) {
         history.push(`/categories/${id}`)
@@ -90,7 +98,7 @@ function Services({
             </p>
 
             <p>
-              <Button onClick={selectCategory} >View</Button>
+              <Button onClick={selectService} >View</Button>
             </p>
           </div>
         </div>

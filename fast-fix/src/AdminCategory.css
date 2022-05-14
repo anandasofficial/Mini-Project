@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Oswald:wght@500&family=Shadows+Into+Light&family=Source+Code+Pro:wght@200;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Oswald:wght@500;600&family=Shadows+Into+Light&family=Source+Code+Pro:wght@200;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka+One&family=Koulen&family=Oswald:wght@500;600&family=Paytone+One&family=Righteous&family=Secular+One&family=Shadows+Into+Light&family=Source+Code+Pro:wght@200;700&display=swap");
+.adminCategoryRight__below {
+  width: 850px;
+}
+.Right__belowOneCategory {
+  margin-left: 20px;
+  height: 727px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  width: 900px;
+}
+.belowOneCategory__heading {
+  border-radius: 15px;
+  margin-left: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+.belowOneCategory__below {
+  margin-left: 90px;
+  justify-content: space-evenly;
+  display: flex;
+}
+.belowOneCategory__below > table {
+  margin-top: 40px;
+  background-color: whitesmoke;
+  padding: 24px;
+  border: 2px solid #edf2f9;
+  font-size: medium;
+  color: grey;
+  margin-left: -60px;
+  font-family: "Paytone One", sans-serif;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.belowOneCategory__below > button {
+  color: blueviolet;
+}
+.update__button {
+  border-radius: 15px;
+  background-color: antiquewhite;
+  color: aqua;
+}
+.belowOneCategory__below {
+  color: aquamarine;
+}
+.service__Button > button {
+  font-family: monospace;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #ccf6e4;
+  color: #00864e;
+}
+.add__yourcategory {
+  display: flex;
+  margin-left: 50px;
+}
+.add__yourcategory > form > input {
+  width: 150px;
+  height: 20px;
+  border-radius: 15px;
+  border-color: lightgray;
+}
+.add__yourcategory > form > input::placeholder {
+  color: gray;
+}
+.addCategory__button {
+  margin-top: -1px;
+  margin-left: 20px;
+}
+.addCategory__button > button {
+  width: 150px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #ccf6e4;
+}
+.delete__categorybutton > button {
+  font-family: monospace;
+  background-color: #fde6d8;
+  color: #9d5228;
+  width: 100px;
+  border-radius: 15px;
+  height: 20px;
+}

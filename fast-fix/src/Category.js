@@ -5,9 +5,11 @@ import Services from "./Services";
 import CategoryOption from "./CategoryOption";
 import "./Category.css";
 import TaskerHomePage from './TaskerHomePage';
+import { Button } from "@material-ui/core";
 
 function Category() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [name, setName] = useState("");
 
   const { categoryId } = useParams();
   const [roomDetails, setRoomDetails] = useState(null);
@@ -39,6 +41,17 @@ function Category() {
         setRoomServices(snapshot.docs.map((doc) => doc.data()))
       );
   }, [categoryId]);
+
+  const submit = () => {
+    if (categoryId) {
+      db.collection("categories")
+      .doc(categoryId)
+      .collection("service")
+      .add({
+        name: name,
+      })
+    }
+  };
   return (
     <div className="category">
       <div className="category_info">
@@ -57,7 +70,17 @@ function Category() {
 
       <div className="category_container">
         <h1>{roomDetails?.name}</h1>
+       <form>
+         <input type="text"
+         onChange={(e) => setName(e.target.value)}
+         >
+
+         </input>
+       </form>
+       <Button onClick={submit}>Submit</Button>
       </div>
+     
+     
       {roomServices.filter(({ title }) => {
           if (searchTerm === "") {
               return title;

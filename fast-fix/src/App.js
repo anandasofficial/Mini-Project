@@ -25,6 +25,13 @@ import Sample from "./Sample";
 import TaskerDetails from "./TaskerDetails";
 import TaskDescription from "./TaskDescription";
 import Services from "./Services";
+import MyTasks from "./MyTasks";
+import MyTasksPage from "./MyTasksPage";
+import Review from './Review';
+import BookService from './BookService';
+import AdminPage from './AdminPage';
+import AdminCategory from './AdminCategory';
+import AdminAddService from './AdminAddService';
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -53,19 +60,44 @@ function App() {
               <TaskerHomePage />
               <Footer />
             </Route>
+
+            <Route path="/review">
+             <Review />
+            </Route>
+
+
+            <Route path="/admincategory">
+             <AdminCategory />
+            </Route>
+            <Route path="/adminpage">
+             <AdminPage />
+            </Route>
+            <Route path="/bookservice/:taskerId">
+              <Header />
+             <BookService />
+            </Route>
+
+            <Route path="/adminservice/:categoryId">
+              
+             <AdminAddService />
+            </Route>
             <Route path="/categories/:categoryId">
               <Header />
               <Category />
             </Route>
-
+            <Route path="/services/:serviceId">
+              <Header />
+              <Services />
+            </Route>
             <Route path="/tasker/:taskerId">
+              <Header />
+              <TaskDescription />
             </Route>
             <Route path="/servicedetails">
               <Header />
               <ServiceDetails />
             </Route>
             <Route path="/admin">
-              
               <Admin />
             </Route>
             <Route path="/sample">
@@ -79,6 +111,15 @@ function App() {
             <Route path="/search">
               <Header />
               <SearchResult />
+            </Route>
+            <Route path="/services">
+              <Header />
+
+              <Services />
+            </Route>
+            <Route path="/mytasks">
+              <Header />
+              <MyTasks />
             </Route>
             <Route path="/taskerlogin">
               <Header />
@@ -96,7 +137,14 @@ function App() {
               <Header />
               <Cart />
             </Route>
-
+            <Route path="/mytasks">
+              <Header />
+              <MyTasks />
+            </Route>
+            <Route path="/mytaskspage">
+              <Header />
+              <MyTasksPage />
+            </Route>
             <Route path="/servicepage">
               <Header />
               <ServicePage />
@@ -108,12 +156,16 @@ function App() {
               <Header />
               <Taskers />
             </Route>
-
+            <Route path="/addservice">
+              <AdminAddService />
+            </Route>
             <Route path="/">
               <Header />
               <Home />
               <Footer />
             </Route>
+
+          
           </Switch>
         </Router>
       </div>

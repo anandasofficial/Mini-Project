@@ -21,13 +21,14 @@
     display: flex;
     border-radius: 30px;
     text-transform: inherit;
-    margin: 3px;
+    margin: 4px;
     justify-content: space-evenly;
     
   }
   .search_button {
+    margin-top: 10px;
     border-color: grey;
-    padding: 10px;
+    padding: 11px;
     border-radius: 30px;
     display: flex;
     

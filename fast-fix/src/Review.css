@@ -1,0 +1,20 @@
+.review:hover {
+    transform: 0.2s;
+}
+.review__container {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 8px;
+    margin-left: 22px;
+    margin-right: 1000px;
+    padding: 30px;
+    width: 500px;
+    background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+
+}
+.review__container:hover {
+    opacity: 0.8s;
+    transform: 0.3s;
+    transition: 0.3s;
+}

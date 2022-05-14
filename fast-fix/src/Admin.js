@@ -3,7 +3,10 @@ import "./Admin.css";
 import { Button } from "@material-ui/core";
 
 import { db } from "./firebase";
+import Taskers from './Taskers';
+import CategoryOption from './CategoryOption';
 function Admin() {
+  const [taskersData, setTaskersData] = useState("");
   const [categoryData, setCategoryData] = useState([]);
   const [serviceData, setServiceData] = useState([]);
   const [updateCategoryName, setUpdateCategoryName] = useState("");
@@ -11,6 +14,14 @@ function Admin() {
   const [categoryName, setCategoryName] = useState("");
   const [title, setTitle] = useState("");
   useEffect(() => {
+    db.collection("ServiceProviders").onSnapshot((snapshot) => {
+      setTaskersData(
+        snapshot.docs.map((doc) => ({
+          taskerId: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
     db.collection("services").onSnapshot((snapshot) => {
       setServiceData(
         snapshot.docs.map((doc) => ({
@@ -19,7 +30,7 @@ function Admin() {
         }))
       );
     });
-    db.collection("categories").onSnapshot((snapshot) => {
+    db.collection("categories").orderBy("name", "asc").onSnapshot((snapshot) => {
       setCategoryData(
         snapshot.docs.map((doc) => ({
           categoryId: doc.id,
@@ -44,11 +55,17 @@ function Admin() {
   };
 
   const deleteCategory = (categoryId) => {
-    db.collection("categories").doc(categoryId).delete();
-  };
+    if(window.confirm("Are you sure you want to delete this category?")) {
+      db.collection("categories").doc(categoryId).delete();
+    };
+    }
+    
   const deleteService = (serviceId) => {
-    db.collection("services").doc(serviceId).delete();
-  };
+   
+      db.collection("services").doc(serviceId).delete();
+    };
+    
+   
 
   const addService = () => {
     const categoryId = prompt("Please enter the service!");
@@ -65,7 +82,8 @@ function Admin() {
         <div className="Admin__header">
           <h1>Icon</h1>
           <h1>Admin Panel</h1>
-          <h1>Email</h1>
+          <img src="https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"></img>
+
         </div>
 
         <div className="Admin__middle">
@@ -87,7 +105,7 @@ function Admin() {
               <tr key={categoryId}>
                 <td>{data.name}</td>
                 <td>
-                  <Button className="update__button">Update</Button>
+                  <Button className="Update__button">Update</Button>
                 </td>
                 <td>
                   <Button
@@ -118,9 +136,10 @@ function Admin() {
         </div>
           <table>
             <tr></tr>
-            {serviceData?.map(({ serviceId, data }) => (
+            {serviceData?.map(({ serviceId, data, src }) => (
               <tr key={serviceId}>
                 <td>{data.title}</td>
+                <td></td>
                 <td>
                   <Button>Update</Button>
                 </td>
@@ -137,8 +156,17 @@ function Admin() {
             ))}
           </table>
         </div>
+        <div className="Admin__middleThree">
+        <h1>
+            Taskers__________________________________________________________________________
+          </h1>   
+          <table>
+            
+              </table>
+
+           </div>
       </div>
-    
+   
     </div>
   );
 }

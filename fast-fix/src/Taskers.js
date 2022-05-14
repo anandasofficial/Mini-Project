@@ -6,8 +6,8 @@ import { db } from "./firebase";
 import StarIcon from "@material-ui/icons/Star";
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import { useHistory } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Taskers({
   taskerId,
@@ -24,18 +24,16 @@ function Taskers({
   price,
   total,
 }) {
-
   const history = useHistory();
   const selectCategory = () => {
-    if (taskerId) {
-      history.push(`/tasker/${taskerId}`);
+    if (id) {
+      history.push(`/tasker/${id}`);
+    } else {
+      console.log("NOOP");
     }
-    else {
-      console.log('NOOP');
-    }
-  }
+  };
   return (
-    <div className="taskers">
+    <div className="taskers" onClick={selectCategory}>
       <img src={src} alt="" />
 
       <div className="taskers__info">
@@ -49,9 +47,10 @@ function Taskers({
           <p>____</p>
           <h3>Featured Skills</h3>
           <div className="job__des">
-          <p>{service}</p>
-          <div className="p"><p>${price}/hour</p>
-</div>
+            <p>{service}</p>
+            <div className="p">
+              <p>${price}/hour</p>
+            </div>
           </div>
         </div>
 

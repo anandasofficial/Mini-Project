@@ -1,0 +1,39 @@
+.belowOneCategory__inputs {
+  height: 443.583px;
+  width: 860px;
+  margin-left: 20px;
+  justify-content: center;
+  background-color: whitesmoke;
+  align-items: center;
+}
+.belowOneCategory__inputs > img {
+  display: grid;
+  margin-left: 15px;
+  height: 280.783px;
+  width: 620px;
+}
+.belowOneCategory__inputs > img {
+  height: 443.583px;
+  width: 650px;
+  margin-left: 130px;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+}
+
+.inputs__details > h1 {
+  margin-left: 10px;
+  padding: 10px;
+}
+.inputs__details > form > input {
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: lightgrey;
+margin-left: 20px;
+height: 20px;
+width: 350px;
+}
+.inputs__details > form > input::placeholder {
+    font-family: monospace;
+}
