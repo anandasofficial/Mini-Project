@@ -2,6 +2,7 @@ import React from "react";
 import "./AdminPage.css";
 import AdminSidebar from "./AdminSidebar";
 import { Link } from "react-router-dom";
+import { AiOutlineUser } from 'react-icons/ai';
 
 function AdminPage() {
   return (
@@ -10,8 +11,9 @@ function AdminPage() {
       <AdminSidebar />
         <div className="adminPage__Right">
           <div className="Right__above">
-            <h4>Dashboard</h4>
-            <h4>Sign In</h4>
+            <h4><input type="text" placeholder="Search"></input></h4>
+            <h4><AiOutlineUser/>Sign In</h4>
+            <h4>Anand AS</h4>
           </div>
           <div className="Right__middle">
             <div className="Right__middleOne">
@@ -42,10 +44,8 @@ function AdminPage() {
             <div className="Right__belowOne">
               <h1>One</h1>
             </div>
-            <div className="Right__belowOne">
-              <h1>One</h1>
-            </div>
-            <div className="Right__belowOne">
+           
+            <div className="Right__belowTwo">
               <h1>One</h1>
             </div>
           </div>

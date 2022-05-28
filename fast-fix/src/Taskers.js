@@ -65,7 +65,7 @@ function Taskers({
             <p></p>
 
             <div className="b">
-              <Button onClick={selectCategory}>Book Now</Button>
+              <Button onClick={selectCategory}>View</Button>
             </div>
           </div>
         </div>

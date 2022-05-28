@@ -9,7 +9,7 @@ import { db } from "./firebase";
 import { useHistory } from "react-router-dom";
 
 function Services({
-  name,
+  timestamp,
   id,
   src,
   location,
@@ -20,26 +20,25 @@ function Services({
   total,
 }) {
   const history = useHistory();
+  const { serviceId } = useParams();
   const [services, setServices] = useState([]);
-const selectService = () => {
-  if (id) {
-    history.push(`/services/${id}`)
- 
-  } else {
-    history.push('/');
-
-  }
-}
+  const selectService = () => {
+    if (id) {
+      history.push(`/service/${id}`);
+    } else {
+      history.push(title);
+    }
+  };
   const selectCategory = () => {
     if (id) {
-        history.push(`/categories/${id}`)
-        db.collection("services")
-        .onSnapshot((snapshot) => 
-        setServices(snapshot.docs.map((doc) => doc.data())))
+      history.push(`/categories/${id}`);
+      db.collection("services").onSnapshot((snapshot) =>
+        setServices(snapshot.docs.map((doc) => doc.data()))
+      );
     } else {
-        history.push('/');
+      history.push("/");
     }
-  }
+  };
   const [state, dispatch] = useStateValue();
 
   const { categoryId } = useParams();
@@ -55,6 +54,7 @@ const selectService = () => {
         location: location,
         title: title,
         description: description,
+        timestamp: timestamp,
       },
     });
   };
@@ -67,6 +67,7 @@ const selectService = () => {
   }, [categoryId]);
   return (
     <div className="searchResult">
+      {serviceId}
       <img src={src} alt="" />
       <FavoriteBorderIcon className="searchResult__heart" />
 
@@ -98,7 +99,7 @@ const selectService = () => {
             </p>
 
             <p>
-              <Button onClick={selectService} >View</Button>
+              <Button onClick={selectService}>View</Button>
             </p>
           </div>
         </div>

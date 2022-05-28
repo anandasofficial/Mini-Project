@@ -3,10 +3,13 @@ import './AdminPage.css';
 import './AdminSidebar.css';
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
+import { MdOutlineDashboard } from 'react-icons/md';
+import AdminTaskers from './AdminTaskers';
 function AdminSidebar() {
     const history = useHistory();
-
+const newDivision = () => {
+  <AdminTaskers/>
+}
   return (
     <div className="adminPage__Left">
     <div className="adminPage__LeftDetails">
@@ -15,13 +18,12 @@ function AdminSidebar() {
     </div>
     <div className="LeftDetails__Two">
 
-      <h4 onClick={() => history.push('/adminpage')}>Dashboard</h4>            
+      <h4 onClick={() => history.push('/adminpage')}><MdOutlineDashboard/>Dashboard</h4>            
       <h4 onClick={() => history.push('/admincategory')}>Categories</h4>
-      <h4 onClick={() => history.push('/addservice')}>Services</h4>
-      <h4>Add Category</h4>
-      <h4>Taskers</h4>
+      <h4 onClick={() => history.push('/adminallservices')}>Services</h4>
+      <h4 onClick={() => history.push('/admintaskers')}>Taskers</h4>
       <h4>Reviews</h4>
-      <h4>My Profile</h4>
+      <h4 onClick={newDivision}>My Profile</h4>
     </div>
   </div>
   )

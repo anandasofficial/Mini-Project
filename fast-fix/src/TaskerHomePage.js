@@ -35,6 +35,8 @@ function Sample({ categoryId }) {
     service: "",
     city: "",
     price: "",
+    
+
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -56,8 +58,8 @@ function Sample({ categoryId }) {
     
 
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-
+      
+        
       history.push('/');
       db.collection("ServiceProviders").add({
         src: formValues.src,
@@ -141,6 +143,7 @@ function Sample({ categoryId }) {
               />
               <p>{formErrors.service}</p>
 
+
               <h5>Your City</h5>
               <input
                 type="text"
@@ -161,7 +164,7 @@ function Sample({ categoryId }) {
                 <h5>Enter your image url</h5>
 
                 <input
-                  type="text"
+                  type="file"
                   name="src"
                   value={formValues.src}
                   onChange={handleChange}

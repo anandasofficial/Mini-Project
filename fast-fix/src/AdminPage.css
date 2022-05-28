@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Oswald:wght@500&family=Shadows+Into+Light&family=Source+Code+Pro:wght@200;700&display=swap');
+
 .adminPage {
     background-color: white;
     }
     .adminPage__container {
         display: flex;
-        height: 900px;
-        background-color: white;
+        height: 20000px;
+        background-color: #edf2f9;
     }
     .adminPage__Left {
         text-decoration: none;
@@ -16,10 +18,10 @@
         height: 620px;
       background-color: #edf2f9;
       /*  background-color: #ecdcd8;*/
-        box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+     /* box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);*/
+
     }
     .adminPage__Right {
-    
         margin-left: 295px;
         width: 1054px;
     }
@@ -45,17 +47,19 @@
     }
     .Right__belowOne {
         margin-left: 20px;
-        height: 327px;
-        width: 326px;
+        height: 417px;
+        width: 724px;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
     }
     .adminPage__LeftDetails {
+
         display: flex;
         text-align: center;
     }
     .adminPage__LeftDetails > h1 {
+
         font-size: larger;
         margin-top: 4px;
         margin-left: 30px;
@@ -64,7 +68,7 @@
     }
     .adminPage__LeftDetails > img {
         object-fit: cover;
-        margin-top: 8px;
+        margin-top: -3px;
         margin-left: 5px;
         height: 44px;
         width: 44px;
@@ -89,12 +93,13 @@
         display: flex;
     }
     .Right__above > h4 {
-        margin-right: 40px;
+        margin-left: 49px;
+        margin-right: 104px;
     }
     .LeftDetails__Two {
     
         margin-top: 50px;
-        margin-left: 20px;
+        margin-left: 111px;
     }
     .LeftDetails__Two > h4:hover {
         cursor: pointer;
@@ -106,4 +111,20 @@
     }
     .Right__above > h4 {
         cursor: pointer;
+    }
+    .Right__belowTwo {
+        height: 417px;
+        width: 228px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    }
+    .Right__above > h4 > input {
+        
+        height: 32.9px;
+        width: 336px;
+        border: 1px solid #d8e2ef;
+        border-radius: 25px;
+        padding: 5px 32px 5px 32px;
+        display: block;
     }
