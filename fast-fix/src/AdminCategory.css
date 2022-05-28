@@ -70,8 +70,10 @@
 
 }
 .add__yourcategory > form > input {
-  height: 32.9px;
-  width: 336px;
+  margin-top: 10px;
+  margin-left: -399px;
+  height: 20.9px;
+  width: 186px;
   border: 1px solid #d8e2ef;
   border-radius: 25px;
   padding: 5px 32px 5px 32px;
@@ -108,4 +110,12 @@
 .belowOneCategory__below  > tr > td {
   border-bottom: 1px solid lightgray;
   padding: 20px;
+}
+.addCategory > button{
+  margin-top: 10px;
+  margin-left: -122px;
+}
+.viewService__button > button {
+  width: 60px;
+  height: 17.5px;
 }

@@ -113,6 +113,7 @@ function AdminAddService() {
               <div className="belowOneCategory__inputs">
                 <div className="inputs__details">
                   <h1> {categoryName?.name}</h1>
+
                   <form>
                     <input
                       type="text"
