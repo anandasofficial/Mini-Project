@@ -1,0 +1,19 @@
+.table__admin > tr > td > img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.Right__belowOneCategory {
+  flex: auto;
+}
+.table__admin > tr > td > button {
+  font-size: 10px;
+  padding: 1px;
+  border-bottom: 1px solid #557db4;
+  border-top: 1px solid #557db4;
+  border-left: 1px solid #557db4;
+  border-right: 1px solid #557db4;
+
+  color: #557db4;
+}

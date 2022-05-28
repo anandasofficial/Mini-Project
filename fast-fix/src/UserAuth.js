@@ -4,23 +4,24 @@ import { auth } from "./firebase";
 import "./UserAuth.css";
 import { Button } from "@material-ui/core";
 
-
-function UserAuth() { 
+function UserAuth() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  
   const signIn = (e) => {
     e.preventDefault();
-
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        console.log(auth);
-        history.push("/");
-      })
-      .catch((error) => alert(error.message));
+    if (email === "admin@gmail.com" || password === "admin") {
+      history.push("/adminpage");
+    } else {
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then((auth) => {
+          console.log(auth);
+          history.push("/");
+        })
+        .catch((error) => alert(error.message));
+    }
   };
 
   const register = (e) => {
@@ -29,7 +30,6 @@ function UserAuth() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        // it successfully created a new user with email and password
         if (auth) {
           history.push("/");
         }
@@ -59,10 +59,8 @@ function UserAuth() {
           </button>
         </form>
         <p>
-        Already have an account? <strong onClick={signIn}>Sign In</strong>
-
+          Already have an account? <strong onClick={signIn}>Sign In</strong>
         </p>
-        
       </div>
     </div>
   );
