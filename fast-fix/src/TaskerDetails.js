@@ -42,13 +42,13 @@ useEffect(() => {
         </form>
       </div>
       {taskers
-        .filter(({ city }) => {
+        .filter(({ name }) => {
           if (searchTerm === "") {
-            return city;
+            return name;
           } else if (
-            city.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+            name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
           ) {
-            return city;
+            return name;
           }
         })
         .map(({ name, id, price, src, phone, service, city }) => (

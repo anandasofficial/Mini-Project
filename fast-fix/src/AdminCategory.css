@@ -119,3 +119,8 @@
   width: 60px;
   height: 17.5px;
 }
+.error__division > p{
+  margin-left: 1px;
+  margin-top: 50px;
+  color: red;
+}

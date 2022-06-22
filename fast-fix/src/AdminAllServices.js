@@ -51,6 +51,12 @@ function AdminAllServices() {
       db.collection("services").doc(serviceId).delete();
     }
   };
+  const updateService = (serviceId) => {
+    if (serviceId) {
+      history.push(`/adminUpdateService/${serviceId}`);
+    }
+  };
+
   return (
     <div className="adminPage">
       <div className="adminPage__container">
@@ -80,6 +86,7 @@ function AdminAllServices() {
                       <th>Service</th>
                       <th>Description</th>
                       <th>Action</th>
+                      <th>Action</th>
                     </tr>
                     {services
                       .filter(({ title }) => {
@@ -102,7 +109,14 @@ function AdminAllServices() {
                         >{title}</td>
                           <td>{description}</td>
                           <td><Button onClick={() => {deleteService(serviceId);}}>Delete</Button></td>
-                          <td></td>
+                          <td><Button
+                              className="Update__button"
+                              onClick={() => {
+                                updateService(serviceId);
+                              }}
+                            >
+                              Update
+                            </Button></td>
                         </tr>
                       ))}
                   </table>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminSidebar from "./AdminSidebar";
 import "./AdminViewService.css";
 import "./AdminTaskers.css";
-import { db } from "./firebase";
+import { auth, db } from "./firebase";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { Button } from "@material-ui/core";
@@ -10,19 +10,87 @@ import Category from "./Category";
 
 function AdminCategory() {
   const history = useHistory();
+
+  function GetCurrentUser() {
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          db.collection("admin")
+            .doc(user.uid)
+            .get()
+            .then((snapshot) => {
+              setUser(snapshot.data().FullName);
+            });
+        } else {
+          setUser(null);
+        }
+      });
+    }, []);
+    return user;
+  }
+  const user = GetCurrentUser();
+  console.log(user);
+
+  const handleLogout = () => {
+    auth.signOut().then(() => {
+history.push('/adminlogin');
+    })
+  }
+
   const { categoryId } = useParams();
   const [categoryData, setCategoryData] = useState([]);
   const [categoryName, setCategoryName] = useState("");
   const [roomDetails, setRoomDetails] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  const initialValues = {
+    name: "",
+  };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+  const addCategory = (e) => {
+    e.preventDefault();
+    console.log(typeof categoryId);
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+  useEffect(() => {
+    console.log(formErrors);
+
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+
+  
+        db.collection("categories").add({
+          name: formValues.name,
+        });
+    
+      
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+    if (!values.name) {
+      errors.name = "Category name is required!";
+    }
+    return errors;
+  };
   useEffect(() => {
     if (categoryId) {
       db.collection("categories")
         .doc(categoryId)
         .onSnapshot((snapshot) => setRoomDetails(snapshot.data()));
     }
-    db.collection("categories").onSnapshot((snapshot) =>
+    db.collection("categories")
+    .orderBy("name","asc")
+    .onSnapshot((snapshot) =>
       setCategoryData(
         snapshot.docs.map((doc) => ({
           categoryId: doc.id,
@@ -49,13 +117,7 @@ function AdminCategory() {
       history.push(`/adminviewservice/${categoryId}`);
     }
   };
-  const addCategory = (e) => {
-    e.preventDefault();
-    db.collection("categories").add({
-      name: categoryName,
-    });
-    setCategoryName("");
-  };
+
   const addService = (categoryId) => {
     if (categoryId) {
       history.push(`/adminservice/${categoryId}`);
@@ -70,7 +132,9 @@ function AdminCategory() {
   return (
     <div className="adminPage">
       <div className="adminPage__container">
-        <AdminSidebar />
+        <AdminSidebar 
+        user={user}
+        />
         <div className="adminPage__Right">
           <div className="Right__above">
             <h4>
@@ -81,9 +145,16 @@ function AdminCategory() {
                 }}
                 placeholder="Search Taskers"
               ></input>
-            </h4>
+                              <div className="error__division"><p>{formErrors.name}</p></div>
 
-            <h4>Sign In</h4>
+            </h4>
+{!user&&<>
+
+  <h4>Sign In</h4>
+</>}
+{user&&<>
+<h4>Sign Out</h4>
+</>}
           </div>
           <div className="adminCategoryRight__below">
             <div className="Right__belowOneCategory">
@@ -92,19 +163,24 @@ function AdminCategory() {
                 <div className="add__yourcategory">
                   <form>
                     <input
+                      placeholder="Add Category"
                       type="text"
-                      value={categoryName}
-                      onChange={(e) => setCategoryName(e.target.value)}
-                      placeholder="Add category"
-                      title="Add category"
-                    ></input>
+                      name="name"
+                      value={formValues.name}
+                      onChange={handleChange}
+                    />
                   </form>
                   <div className="addCategory">
-                  
-                    <Button onClick={addCategory}>Add Category</Button>
+                    <Button type="submit" onClick={addCategory}>
+                      Add Category
+                    </Button>
+
                   </div>
+
                 </div>
+
                 <div className="adminViewService__below">
+
                   <table className="table__admin">
                     <tr>
                       <th>Services</th>
@@ -127,11 +203,7 @@ function AdminCategory() {
                       })
                       .map(({ categoryId, name }) => (
                         <tr key={categoryId}>
-                          <td
-                            
-                          >
-                            {name}
-                          </td>
+                          <td>{name}</td>
                           <td>
                             <Button
                               onClick={() => {
@@ -162,14 +234,13 @@ function AdminCategory() {
                             </Button>
                           </td>
                           <td>
-                            <Button 
+                            <Button
                               onClick={() => {
                                 viewService(categoryId);
                               }}
                             >
                               View Service
                             </Button>
-                            
                           </td>
                         </tr>
                       ))}

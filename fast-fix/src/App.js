@@ -37,6 +37,9 @@ import AdminViewService from "./AdminViewService";
 import AdminTaskers from './AdminTaskers';
 import AdminUpdateCategory from './AdminUpdateCategory';
 import AdminAllServices from './AdminAllServices';
+import AdminUpdateService from './AdminUpdateService';
+import AdminSignUp from './AdminSignUp';
+import AdminLogin from './AdminLogin';
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -73,14 +76,24 @@ function App() {
             <Route path="/admintaskers">
              <AdminTaskers />
             </Route>
+           
 
             <Route path="/adminallservices">
              <AdminAllServices />
             </Route>
-            <Route path="/adminUpdateCategory">
+            <Route path="/adminsignup">
+             <AdminSignUp />
+            </Route>
+            <Route path="/adminlogin">
+             <AdminLogin />
+            </Route>
+            <Route path="/adminUpdateCategory/:categoryId">
              <AdminUpdateCategory />
             </Route>
 
+            <Route path="/adminUpdateService/:serviceId">
+             <AdminUpdateService />
+            </Route>
             <Route path="/admincategory">
              <AdminCategory />
             </Route>
@@ -91,7 +104,8 @@ function App() {
               <Header />
              <BookService />
             </Route>
- 
+           
+
             <Route path="/adminviewservice/:categoryId">
               <AdminSidebar />
               <AdminViewService />

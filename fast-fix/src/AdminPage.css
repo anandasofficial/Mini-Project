@@ -47,7 +47,7 @@
     }
     .Right__belowOne {
         margin-left: 20px;
-        height: 417px;
+        height: auto;
         width: 724px;
         background-color: white;
         border-radius: 15px;
@@ -128,3 +128,21 @@
         padding: 5px 32px 5px 32px;
         display: block;
     }
+    .table__admins > tr > td {
+        text-align: center;
+        border-bottom: 1px solid #EDF2F9;
+        padding: 10px;
+      }
+      .table__admins > tr > td:hover {
+        color: blue;
+        cursor: pointer;
+      }
+      .table__admins > tr > th {
+        padding: 10px;
+        background-color: #f0f4fc;
+        text-align: center;
+        width: 300px;
+        justify-content: space-evenly;
+        margin-left: 40px;
+      }
+      

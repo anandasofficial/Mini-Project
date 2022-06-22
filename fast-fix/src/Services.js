@@ -45,6 +45,7 @@ function Services({
   const [roomDetails, setRoomDetails] = useState(null);
 
   const addToCart = () => {
+    
     dispatch({
       type: "ADD_TO_CART",
       item: {
@@ -69,12 +70,12 @@ function Services({
     <div className="searchResult">
       {serviceId}
       <img src={src} alt="" />
-      <FavoriteBorderIcon className="searchResult__heart" />
+      <FavoriteBorderIcon onClick={addToCart} className="searchResult__heart" />
 
       <div className="searchResult__info">
         <div className="searchResult__infoTop">
           <div className="service__price">
-            <p>$</p>
+            <p>₹</p>
             <p>{price}</p>
             <p>/hour</p>
           </div>

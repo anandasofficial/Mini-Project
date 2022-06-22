@@ -6,9 +6,12 @@ import TaskerLogin from "./TaskerLogin";
 import { useParams } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
-function Sample({ categoryId }) {
+function Sample() {
   const history = useHistory();
+  const [serviceId, setServiceId] = useState("");
+  const [categoryData, setCategoryData] = useState([]);
 
+  const [service, setService] = useState([]);
   const { roomId } = useParams();
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -35,7 +38,6 @@ function Sample({ categoryId }) {
     service: "",
     city: "",
     price: "",
-    
 
   };
   const [formValues, setFormValues] = useState(initialValues);
@@ -52,6 +54,24 @@ function Sample({ categoryId }) {
     setFormErrors(validate(formValues));
     setIsSubmit(true);
   };
+
+  useEffect(() => {
+    if(serviceId) {
+      db.collection("services")
+      .doc(serviceId)
+      .onSnapshot((snapshot) => setService(snapshot.data()));
+    }
+  })
+  useEffect(() => {
+    db.collection("services").onSnapshot((snapshot) => {
+      setCategoryData(
+        snapshot.docs.map((doc) => ({
+          serviceId: doc.id,
+          title: doc.data().title,
+        }))
+      );
+    });
+  }, []);
   useEffect(() => {
     console.log(formErrors);
 
@@ -68,6 +88,7 @@ function Sample({ categoryId }) {
         service: formValues.service,
         city: formValues.city,
         price: formValues.price,
+        serviceId: formValues.serviceId,
       });
     }
     
@@ -103,6 +124,7 @@ function Sample({ categoryId }) {
   return (
     <div className="sample">
       <h1>Share Your Skills</h1>
+      <h1>{categoryData?.title}</h1>
       <div className="sample__container">
         <div className="sample__heading"></div>
         <div className="sample__center">
@@ -135,6 +157,7 @@ function Sample({ categoryId }) {
               <p>{formErrors.phone}</p>
 
               <h5>Services you offer</h5>
+             
               <input
                 type="text"
                 name="service"

@@ -49,7 +49,7 @@ function Taskers({
           <div className="job__des">
             <p>{service}</p>
             <div className="p">
-              <p>${price}/hour</p>
+              <p>₹{price}/hour</p>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import { Button } from '@material-ui/core';
 import TaskDescription from './TaskDescription';
 
 function AdminTaskers() {
+
   const [servicePro, setServicePro] = useState([]);
   const [roomDetails, setRoomDetails] = useState("");
 
@@ -50,7 +51,7 @@ const [taskData, setTaskersData] = useState([]);
    setServicePro (
      snapshot.docs.map((doc) => ({
        taskerId: doc.id,
-       data: doc.data(),
+       name: doc.data().name,
      }))
    ))
     
@@ -79,7 +80,7 @@ const [taskData, setTaskersData] = useState([]);
  },[taskerId])
   const viewTasker = (taskerId) => {
     if(taskerId){
-      history.push(`/bookservice/${taskerId}`);
+      history.push(`/tasker/${taskerId}`);
     } else {
       console.log("");
     }
@@ -116,8 +117,7 @@ const [taskData, setTaskersData] = useState([]);
                       <th>Description</th>
                       <th>Action</th>
                     </tr>
-                    {serviceProviders
-                      .filter(({ name }) => {
+                    {serviceProviders.filter(({ name }) => {
                         if (searchTerm === "") {
                           return name;
                         } else if (

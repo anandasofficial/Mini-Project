@@ -60,7 +60,7 @@ function TaskDescription({id}) {
           <h1>{taskers?.name}</h1>
           <div className="description__rightService">
             <h3>{taskers?.service}</h3>
-            <h3>${taskers?.price}/hr</h3>
+            <h3>₹{taskers?.price}/hr</h3>
           </div>
           <p>Reviews</p>
 
